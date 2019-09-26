@@ -1,9 +1,9 @@
 ---
-title: "A title"
+title: "Presentation Ninja"
 subtitle: "⚔<br/>with xaringan"
-author: "Yihui Xie"
-institute: "RStudio, Inc."
-date: "2016/12/12 (updated: `r Sys.Date()`)"
+author: "Jessica L. Burnett"
+institute: "Science Analytics & Synthesis | Core Science Systems<br/>U.S. Geological Survey"
+date: "2019/10/15 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -15,6 +15,8 @@ output:
 
 background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
 
+##  sdklfjdskj skdfskh
+
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 ```
@@ -24,15 +26,14 @@ options(htmltools.dir.version = FALSE)
 Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharingan_triple.svg)
 
 ---
-class: center, middle
+class: left, top
+# Possible Titles:
+- Integration in an Era of Data Abundance
+- Approaches to Data Reuse and Interoperability in Ecology
 
-# xaringan
-
-### /ʃaː.'riŋ.ɡan/
-
----
-class: inverse, center, middle
-
+# Outline
+## Data Integration in Ecology 
+## 
 # Get Started
 
 ---
