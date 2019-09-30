@@ -13,17 +13,95 @@ output:
       countIncrementalSlides: false
 ---
 
-background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
-
-##  sdklfjdskj skdfskh
-
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
+library(DiagrammeR)
 ```
+
+background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
+
+##  Data Integration in Ecology
+
 
 ???
 
 Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharingan_triple.svg)
+
+---
+
+.pull-left[]
+
+.pull-right[
+```{r outline, echo=FALSE}
+DiagrammeR::grViz("
+digraph boxes_and_circles {
+
+# Graph
+## node attr
+node [shape=circle, 
+      overlap=false,
+      color=white, # invisible
+      fixedsize = true,
+      fontsize = 25,
+      # fillcolor = orange,
+      # fontcolor = black,
+      fontname = baskerville]
+      
+##edge attr
+edge [color = black]      
+
+## define flow
+A -> B -> C -> D  -> E [arrowhead = vee]
+
+# Labels
+A [label = 'Introduction']
+B [label = 'Research Questions']
+C [label = 'Past Research']
+D [label = 'Ongoing Projects']
+E [label = 'Conclusions & \nFuture Directions']
+}
+")
+
+```
+]
+
+???
+
+Talk outline
+
+---
+
+```{r diag2, echo=FALSE}
+DiagrammeR::grViz("
+digraph boxes_and_circles {
+
+# Graph
+## node attr
+node [shape=circle, 
+      fixedsize = false, 
+      width = 2,
+      height = 2
+      fontsize = 20,
+      fillcolor = orange,
+      fontcolor = black,
+      fontname = baskerville]
+      
+##edge attr
+edge [color = grey]      
+
+## define flow
+{B,C,D}-> A [arrowhead = vee]
+
+## Labels
+A [label = 'Software \nDevelopment']
+B [label = 'Abrupt \nChange']
+C [label = 'Data \nIntegration']
+D [label = 'Avian Status \nand Trends']
+
+}
+")
+
+```
 
 ---
 class: left, top
