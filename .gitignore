@@ -35,6 +35,7 @@ vignettes/*.pdf
 *.utf8.md
 *.knit.md
 .DS_Store
-20191015_florida/20191015_florida_presentation_files/figure-html/cars-1.svg
-.DS_Store
-.DS_Store
+*20191015_florida/20191015_florida_presentation_files/
+*20191015_florida/libs
+
+20191015_florida/xaringan-themer.css

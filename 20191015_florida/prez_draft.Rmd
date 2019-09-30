@@ -1,0 +1,76 @@
+---
+title: "<font size='15>Bridging the Gap Between Science and Decision Making through Software Development and Data Integration</font>"
+author: "<font size='12'>**Jessica L. Burnett**</font></br></br><font size='6'>Research Ecologist, Mendenhall Postdoctoral Fellow</font>"
+institute: "Science Analytics and Synthesis | Core Science Systems</br>U.S. Geological Survey, Lakewood CO"
+date: "`r format(Sys.Date(), '%B %e, %Y')`"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    # css: ["css/xaringan_themer.css"]  
+    css: ["css/myFonts.css", "css/myTheme.css"]
+    chakra: libs/remark-latest.min.js #to load the last saved verion for offline use
+    nature:
+      beforeInit: "http://www.jvcasillas.com/ru_xaringan/js/ru_xaringan.js"
+      highlightStyle: github
+      highlightLines: true
+      ratio: "16:9"
+      countIncrementalSlides: false
+      slideNumberFormat: "%current%/%total%" # 12/42 
+      # seal: false
+---
+
+layout: true
+background-image: url(images/USGS_logo.png)
+background-size: 10%
+background-position: left 110px bottom 10px 
+
+---
+```{r save-html-to-pdf, eval=FALSE, echo=FALSE, warning=FALSE, message=FALSE}
+
+## This chunk should be run manually, especially when presentation is large.
+# install.packages("webshot")
+# library(webshot); install_phantomjs()
+webshot::webshot(url="prez_draft.html", file="prez_draft.pdf")
+```
+
+
+```{r setup, message=FALSE, warning=FALSE, cache=TRUE, echo=FALSE}
+xaringan::summon_remark(version = "latest", to = "libs/")
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(include = FALSE, warning=FALSE, message=FALSE, cache=TRUE, fig.path="/figures")
+
+# PACKAGES
+pkgs <- c("tidyverse", "here", "xaringan", "knitr", "rsvg","DiagrammeR","DiagrammeRsvg")
+# create a function to load packages
+loadPkgs <- function(packages) {
+  for(package_name in packages)
+  {library(package_name,character.only=TRUE, quietly = TRUE);}
+}
+loadPkgs(pkgs)
+
+# SET PLOT THEME
+theme_set(theme_bw())
+```
+
+# Core Science Analytics, Synthesis & Libraries  
+__Vision__: Synthesize and deliver Earth system data and information.
+
+--
+
+__Mission__: Accelerate research and decisionmaking through data science, information delivery, advanced computing, and biodiversity analytics.
+
+???
+
+---
+
+
+# Outline
+1. sdflkjsd
+1. sdlkfjs 
+1. sldfkjds
+
+???
+
+Talk outline
+
+---

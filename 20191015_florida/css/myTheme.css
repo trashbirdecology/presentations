@@ -1,0 +1,417 @@
+/*
+CSS for xaringan slides in RU flavor
+Author: Joseph V. Casillas 
+Updated by Jessica Burnett to UNL logo, colors, styling
+*/
+
+/* Package defaults that we slightly tweak */
+
+a, a > code {
+  color: #D00000; /* rgb(208, 0, 0 ) = 'scarlet' red official for UNL */
+  text-decoration: none;
+}
+
+/*USGS green = #007150 */
+
+/* slightly lower and bigger than default */
+.footnote {
+  position: absolute;
+  color: #6d6d69;
+  bottom: 1em;
+  padding-right: 7em;
+  font-size: 95%;
+}
+
+/* important code slightly red */
+.remark-code-line-highlighted {
+  background-color: #FFD3DE !important;
+}
+
+/* color tweak */
+.inverse {
+  background-color: #272822;
+  color: #6d6d69;
+  text-shadow: 0 0 20px #333;
+}
+
+/* slightly spacing change */
+.inverse h1, .inverse h2, .inverse h3 {
+  color: #fefdfa; /* unl cream white */
+  line-height: 1.0em;
+}
+
+/* Two-column layout (slightly wider for aspect ration) */
+.left-column {
+  color: #000;
+  width: 25%;
+/*  height: 92%; */
+  float: left;
+}
+
+.left-column h2:last-of-type, .left-column h3:last-child {
+  color: #000; 
+}
+
+/* slightly thiner to suppor aspect ration */
+.right-column {
+  width: 55%;
+  float: right;
+/*  padding-top: 1em; */ 
+}
+
+/* Two-column layout (slightly wider for aspect ration) */
+.left-column-3 {
+  color: #000;
+  width: 40%;
+  float: left;
+}
+
+.left-column h2:last-of-type, .left-column h3:last-child {
+  color: #000; 
+}
+
+/* slightly thiner to suppor aspect ration */
+.right-column-3 {
+  width: 60%;
+  float: right;
+}
+
+/* x-column 1/2 */
+
+/* Two-column layout (slightly wider for aspect ration) */
+.left-column-half {
+  color: #000;
+  width: 50%;
+  float: left;
+}
+
+.left-column-half h2:last-of-type, .left-column h3:last-child {
+  color: #000;
+}
+
+.right-column-half {
+  width: 50%;
+  float: right;
+}
+
+/* Two-column layout (left wider than right) */
+.left-column-2 {
+  color: #000000;
+  width: 66%;
+  float: left;
+}
+
+.left-column-2 h2:last-of-type, .left-column-2 h3:last-child {
+  color: #000;
+}
+
+.right-column-2 {
+  width: 30%;
+  float: left;
+}
+
+
+/* pull-left pull-right design, half/half approx*/
+
+.pull-left {
+  float: left;
+  width: 45%;
+}
+
+.pull-right {
+  float: right;
+  width: 45%;
+}
+
+.pull-right ~ * {
+  clear: both;
+}
+
+img, video, iframe {
+  max-width: 100%;
+}
+
+blockquote {
+  border-left: solid 5px #6d6d69; /* unl grey = #6d6d69;  dark grey = #424240*/
+  padding-left: 1em;
+}
+
+/* adjust table horizontal spacing */
+th, td {
+    padding:0 15px 0 15px;
+}
+
+/* remove color from tables */
+table {
+  margin: auto;
+  border-top: none;
+  border-bottom: none;
+}
+
+table thead th { border-bottom: none; }
+thead, tfoot, tr:nth-child(even) { background: none; }
+
+/* leave this alone */
+@page { margin: 0; }
+@media print {
+  .remark-slide-scaler {
+    width: 100% !important;
+    height: 100% !important;
+    transform: scale(1) !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+}
+
+/*~~~~~~~~~~~~~~*/
+/* RU additions */
+/*~~~~~~~~~~~~~~*/
+
+/* Title slide */
+
+/* Add image and change bg color */
+.title-slide {
+   background-image: url(/images/USGS_logo.png); 
+   background-position: bottom 90px right 180px; 
+   background-size: 15%; 
+/*   box-shadow: inset 0 0 5px 2px #282a2d; /* mark the inset ; add a shadow around the title slide */ 
+   background-color: #fefdfa; /*fefdfa - cream unl */
+   padding-left: 100px;  /* delete this for 4:3 aspect ratio */
+}
+
+
+/* H1 fonts */
+.title-slide h1 {
+  color: #242423; /*242423 = darkest unl grey*/
+  padding-top: 200px;
+  font-weight: normal;
+  font-size: 57px;
+  line-height: 1.10;
+  text-align: left;
+  text-shadow: none;
+  padding-bottom: 10px;
+  margin-bottom: 18px;
+}
+
+/* H2 fonts */
+.title-slide h2 {
+  color: #424240; /*6d6d69 = unl dark gray ; 424240 = unl darker gray*/
+  font-size: 35px;
+  text-align: left;
+  text-shadow: none;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+/* H3 fonts */
+.title-slide h3 {
+  font-size: 30px;
+  font-weight: normal;
+  color: #666666;
+  text-align: left;
+  text-shadow: none;
+  padding: 0px;
+  margin: 0px;
+  line-height: 1;
+}
+
+/* Remove slide count */
+.title-slide .remark-slide-number {
+  text-shadow: none;
+}
+
+/*~~~~~~~~~~~~~~~~~~*/
+/* SECTION DIVIDERS */
+/*~~~~~~~~~~~~~~~~~~*/
+
+/* section divider red */
+.title-slide-section-red {
+  background-color: #ff0000;
+  padding-left: 100px;  /* delete this for 4:3 aspect ratio */
+}
+
+/* section divider red H1 fonts */
+.title-slide-section-red h1, .title-slide-section-red h2, .title-slide-section-red h3, .title-slide-section-red p {
+  color: #fefdfa;
+}
+
+/* section divider grey */
+.title-slide-section-grey {
+  background-color: #242423; /* darkest UNL gray color */
+  padding-left: 100px;  /* delete this for 4:3 aspect ratio */
+}
+
+/* section divider grey H1 fonts */
+.title-slide-section-grey h1, .title-slide-section-grey h2, .title-slide-section-grey h3 {
+  color: #fefdfa;
+}
+
+.title-slide-section-grey p {
+  color: #fefdfa;
+}
+
+/*~~~~~~~~~~~~~~~~~~*/
+/* FINAL SLIDE      */
+/*~~~~~~~~~~~~~~~~~~*/
+
+.title-slide-final {
+  background-color: #272822; /* black */
+  color: #fefdfa;
+  padding-left: 100px;
+  text-shadow: 0 0 20px #333;
+  text-align: center;
+}
+
+.title-slide-final h1 {
+  color: #ff0000;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~*/
+/* Global adjustments */
+/*~~~~~~~~~~~~~~~~~~~~*/
+
+/* Add padding to all slides for 16:9 aspect ratio */
+.remark-slide-content {
+  padding-left: 100px;  /* delete this for 4:3 aspect ratio */
+  font-size: 30px; /*global font size for non-header text*/
+}
+
+/* Color adjustments for text */
+
+/* Make bold syntax compile to USGS green */
+strong {
+  color: #007150;
+}
+
+.RUred {
+  color: #ff0000;
+}
+
+/* Add blue tag */
+.blue {
+  color: #0000CC;
+  font-weight: bold;
+}
+
+/* Add grey tag */
+.grey {
+  color: #242423;
+}
+
+.lightgrey {
+  color: #818181;
+}
+
+/* Force black */
+.black {
+  color: black;
+  font-weight: bold;
+}
+
+/* Add (UNLcream) tag */
+.cream {
+  color: #FEFDFA;
+}
+
+
+/* Add (white) tag */
+.white {
+  color: white;
+}
+
+/* Color adjustments to headers */
+h1 {
+  color: #007150; /* USGS green = 007150*/
+}
+
+h3 {
+  color: #242423;
+}
+
+
+/*~~~~~~~~~~~~~~~~~~~~*/
+/* Custom Font Sizes  */
+/*~~~~~~~~~~~~~~~~~~~~*/
+
+/* Font size tags */
+.big {
+  font-size: 2.5em;
+}
+
+.medium {
+  font-size: 1.9em;
+}
+.small-med {
+  font-size: 1.75em;
+}
+.small {
+  font-size: 1.6em;
+}
+
+.smaller {
+  font-size: 1.15em;
+}
+
+
+/*~~~~~~~~~~~~~~~~~~~~*/
+/* Custom Block Quote */
+/*~~~~~~~~~~~~~~~~~~~~*/
+
+/* ru blockquote */
+ru-blockquote {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 40px;
+  margin-right: 40px;
+  border-left: solid 10px #ff0000;
+  background-color: #818181;
+  padding: 1em;
+  color: #fefdfa;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+
+
+/*~~~~~~~~~~~~~~~~~~~~*/
+/* Custom Footer      */
+/*~~~~~~~~~~~~~~~~~~~~*/
+
+/* custom footer JLB */
+.footer {
+    color: black;
+    position: left;
+    top: 95%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+}
+
+
+/*~~~~~~~~~~~~~~~~~~~~*/
+/* Custom Hanging Indent */
+/*~~~~~~~~~~~~~~~~~~~~*/
+.hang{ margin-left: -2em; 
+ text-indent: 2em 
+ }
+ 
+ 
+ /*~~~~~~~~~~~~~~~~~~~~*/
+/* Custom Columns      */
+/*~~~~~~~~~~~~~~~~~~~~ */
+
+.col3-left {
+  width: 30%;
+  float: left;
+}
+
+.col3-center {
+  width: 30%;
+  float: center;
+}
+ 
+.col3-right {
+  width: 30%;
+  float: right;
+}
