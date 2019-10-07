@@ -132,7 +132,7 @@ placebohlder
 - E.g., what would it take (hours, time, networks) for a research ecologist to reach out to *potential* end users of the data or software product -- is it worth their time? Is there a way we can make this more efficient (this is more of a career goal i think). This requires a cultural shift
 - Moving beyond publish and perish model of data and software products -- I have seen this with my software already -- 
 - In a business model -- typically we wouldnt waste our time creating products that wouldnt be used -- sure, but we as research ecologists often in a bubble, create products in isolation, getting feedback from our immediate peers who are most likely __not__ end-users of the product, who say yes thats awesome you should definitely do that. But in the business model, we wouldnt spend time and money and resources creating a product without determining the utility of the product -- e.g. through focus groups. 
-- 
+- `
 - 
 
 ---
@@ -151,5 +151,25 @@ __Mission__: Accelerate research and decisionmaking through data science, inform
 - Our team includes geologists, scientific and computer programmers, high performance computing teams, and an ecologist (raises hand)...
 - Just being in this department as the only ecologist provides a unique opportunity for me to figure out how we, as fairly untrained ecologists, can streamline our data production and development -- putting me in a unique position to serve as 
 - This also allows me to learn how to further my skills as a translational ecology
+---
+# Shameless Plugs
+1. R package: `bbsAssistant`  
+1. ESA 2020 : hopefully look out for an IPM session!
+1. NAOC 2020: bbs & bbl symposium or special session
+
 
 ---
+
+# Acknowledgements
+
+.pull-left[## Collaborators
+
+]
+.pull-right[## BBS & BBL Team & Participatory Scientists 
+]
+
+---
+
+# References
+
+
