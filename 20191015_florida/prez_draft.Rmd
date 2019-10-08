@@ -6,7 +6,6 @@ date: "`r format(Sys.Date(), '%B %e, %Y')`"
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    # css: ["css/xaringan_themer.css"]  
     css: ["css/myFonts.css", "css/myTheme.css"]
     chakra: libs/remark-latest.min.js #to load the last saved verion for offline use
     nature:
@@ -26,34 +25,11 @@ background-position: left 110px bottom 10px
 
 ---
 
-```{r save-html-to-pdf, eval=FALSE, echo=FALSE, warning=FALSE, message=FALSE}
-## This chunk should be run manually, especially when presentation is large.
-# install.packages("webshot")
-# library(webshot); install_phantomjs()
-webshot::webshot(url="prez_draft.html", file="
-                 prez_draft.pdf")
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r setup, message=FALSE, warning=FALSE, cache=TRUE, echo=FALSE}
-# xaringan::summon_remark(version = "latest", to = "libs/")
-options(htmltools.dir.version = FALSE)
-knitr::opts_chunk$set(include = FALSE, warning=FALSE, message=FALSE, cache=TRUE, fig.path="/figures")
-
-# PACKAGES
-pkgs <- c("tidyverse", "here", "xaringan", "knitr", "rsvg","DiagrammeR","DiagrammeRsvg")
-# create a function to load packages
-loadPkgs <- function(packages) {
-  for(package_name in packages)
-  {library(package_name,character.only=TRUE, quietly = TRUE);}
-}
-loadPkgs(pkgs)
-
-# SET PLOT THEME
-theme_set(theme_bw())
-
-```
-
-# Talk Outline
+# Talk Outline 
 1. Introduction/About Me
   - WEC Alumni (B.Sc., M.Sc.) <!-- i think this is important to cover as it has shaped my career and research interests, plus, its fun and might make a little bit more relatable. -->
   - Science Analytics & Synthesis, Core Science Systems
@@ -64,11 +40,10 @@ theme_set(theme_bw())
 1. Data and Software Product Development Efforts 
 1. Shameless self-promotion <!-- shameless plugs, software, research -->
 
-???
 
----
+--- 
 
-# About me 
+# About Me
 
 - A montage (four quadrats maybe...)
   - Q2: Me and Katie or pic of TUTI 
@@ -81,17 +56,18 @@ Either use four pictures, or just create one slide per job if I want to do paper
 
 ---
 
-# "Big Data" Ecology & Ornithology  
+# 'Harnessing the Data Revolution in Ecology'
 
 ---
 
 
-# Integrated Modelling in Ecology  
+# Integrated Modelling in Ecology
+
 placeholder 
 
 ---
 
-# Integrated Population Modelling  
+# Integrated Population Modelling
 placebohlder
 
 ---
@@ -138,7 +114,7 @@ placebohlder
 ---
 
 
-# Core Science Analytics, Synthesis & Libraries  
+# Core Science Analytics, Synthesis & Libraries
 __Vision__: Synthesize and deliver Earth system data and information.
 
 --
@@ -157,6 +133,14 @@ __Mission__: Accelerate research and decisionmaking through data science, inform
 1. ESA 2020 : hopefully look out for an IPM session!
 1. NAOC 2020: bbs & bbl symposium or special session
 
+---
+
+# Let's Chat
+
+1. Data integration
+  - Avian point counts + mark-recapture  + environemntal
+  - BBS + BBL
+1. 
 
 ---
 
