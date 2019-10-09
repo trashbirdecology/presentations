@@ -51,7 +51,7 @@ knitr::opts_chunk$set(echo = TRUE)
   - Q3: 
   - Q4: 
 
-???  
+???
 Either use four pictures, or just create one slide per job if I want to do papers produced
 
 ---
