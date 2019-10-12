@@ -17,9 +17,9 @@ a, a > code {
 .footnote {
   position: absolute;
   color: #6d6d69;
-  bottom: 1em;
-  padding-right: 7em;
-  font-size: 95%;
+  bottom: 2.9em;
+  padding-left: 0.5em;
+  font-size: 65%;
 }
 
 /* important code slightly red */
@@ -210,7 +210,7 @@ thead, tfoot, tr:nth-child(even) { background: none; }
   color: #666666;
   text-align: left;
   text-shadow: none;
-  padding: 0px;
+  padding: 10px;
   margin: 0px;
   line-height: 1;
 }
