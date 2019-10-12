@@ -1,0 +1,147 @@
+# USGS Avian Monitoring Science Products
+<!-- ## Breeding Bird Survey -->
+
+.left-column-half[
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('/images/bbs-hosp.png')
+# knitr::include_graphics('/images/bbs-logo.jpg')
+```
+]
+.right-column-half[
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('/images/bbs-fl-routes.png')
+```
+]
+
+???
+1. __BBS__: 
+    - $>$ 4,000 roadside point counts
+    - population trends
+
+---
+
+# USGS Avian Monitoring Science Products
+.pull-left[
+## Bird Banding Lab
+```{r echo=FALSE, out.width='65%'}
+knitr::include_graphics('/images/gooseband.jpg')
+```
+]
+
+--
+
+.pull-right[
+
+## Bird Banding Lab
+```{r echo=FALSE, out.width='65%'}
+knitr::include_graphics('/images/gooseband.jpg')
+```
+]
+
+???
+1. __BBS__: 
+
+---
+
+
+
+
+# Maximizing Federal Science Products & Translational Ecology
+
+--
+
+1. Publications (academic and popular)
+
+--
+
+1. Presentations/outreach
+
+--
+
+1. Software
+
+--
+
+1. Websites
+
+
+???
+
+- I would argue that most ecologists (largely attributed to the way academics and many federal researchers are evaluated) focus on publishing their work as peer-reviewed research articles. This is great, but there are ohter ways to dissemminate their work and to promote the utility of their data. However, this model is static. 
+- Another common step is to present research to different outlets, perhaps at various stages during the project's lifespan -- which may or may not influence the end product -- but unless these presentations occur at a stage of the project where feedback is easily incorporated -- the presentations are more or less self promotion (theres no shame in this as  Iw ill demonstrate at the end of this presentation...)
+*****
+- When projects are supported by stakeholders, if and how the product is beign used is a bit more obvious. 
+- For the huge science products, e.g. those that the USGS creates and hosts/publishes, figuring this out is a bit more difficult
+- Sure we can use web-based tracking metrics to figure this out, but 
+- Tis makes getting feedback on if where and how the data is being used, or the potential and missing links of this a little bit more difficult
+- My project at the usgs will attempt to tackle this issue, hopefully, in a few years time, having a roadmap for applied ecologists and those producing more basic data products a path for not ensuring, but increasing the probability that their data products are going ot be more broadly usefiul.
+
+---
+
+# Iterative Feedback from End-users & Decision Makers in the Data and Software Development
+- FAIR data
+- EarthMap
+- Avoid the path of 'make software then shove in the face'
+- Roadmap for research ecologists and modellers for efficiently gathering and incorporating end-user feedback into data products and tools
+- 
+
+???
+
+- E.g., what would it take (hours, time, networks) for a research ecologist to reach out to *potential* end users of the data or software product -- is it worth their time? Is there a way we can make this more efficient (this is more of a career goal i think). This requires a cultural shift
+- Moving beyond publish and perish model of data and software products -- I have seen this with my software already -- 
+- In a business model -- typically we wouldnt waste our time creating products that wouldnt be used -- sure, but we as research ecologists often in a bubble, create products in isolation, getting feedback from our immediate peers who are most likely __not__ end-users of the product, who say yes thats awesome you should definitely do that. But in the business model, we wouldnt spend time and money and resources creating a product without determining the utility of the product -- e.g. through focus groups. 
+
+
+---
+
+# Shameless Plugs
+1. R package: `bbsAssistant`  
+1. ESA 2020 : hopefully look out for an IPM session!
+1. NAOC 2020: bbs & bbl symposium or special session
+
+---
+
+# Let's Chat
+
+1. Data integration
+  - Avian point counts + mark-recapture  + environemntal
+  - BBS + BBL
+1. 
+
+---
+
+# Acknowledgements
+
+.pull-left[## Collaborators
+
+]
+.pull-right[## BBS & BBL Team & Participatory Scientists 
+]
+
+---
+
+# References
+
+bleh
+
+---
+# Extra crap
+---
+# 2. My Past and Current Research Relies on Extant Monitoring Data
+.pull-left[
+```{r echo=FALSE, out.width='100%'}
+# knitr::include_graphics('/images/ms-thesis.png')
+```
+]
+
+--
+
+.pull-right[
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('/images/phd-thesis.png')
+
+```
+]
+
+---
+
