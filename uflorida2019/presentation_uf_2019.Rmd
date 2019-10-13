@@ -22,7 +22,7 @@ background-position: left 110px bottom 10px
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-# <!--My work build --> 
+# <!--My Past Work 1--> 
 .center[</br></br>
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('/images/efforts/Slide02.png')
@@ -30,7 +30,7 @@ knitr::include_graphics('/images/efforts/Slide02.png')
 ]
 
 ---
-# <!--My work build --> 
+# <!--My Past Work 2--> 
 .center[</br></br>
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('/images/efforts/Slide03.png')
@@ -38,7 +38,7 @@ knitr::include_graphics('/images/efforts/Slide03.png')
 ]
 
 ---
-# <!--My work build --> 
+# <!--My Past Work 3--> 
 .center[</br></br>
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('/images/efforts/Slide04.png')
@@ -46,7 +46,7 @@ knitr::include_graphics('/images/efforts/Slide04.png')
 ]
 
 ---
-# <!--My work build --> 
+# <!--My Past Work 4--> 
 .center[</br></br>
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('/images/efforts/Slide05.png')
@@ -54,7 +54,7 @@ knitr::include_graphics('/images/efforts/Slide05.png')
 ]
 
 ---
-# <!--My work build --> 
+# <!--My Past Work 5--> 
 .center[</br></br>
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('/images/efforts/Slide06.png')
@@ -62,7 +62,7 @@ knitr::include_graphics('/images/efforts/Slide06.png')
 ]
 
 ---
-# <!--My work build --> 
+# <!--My Past Work 6--> 
 .center[</br></br>
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('/images/efforts/Slide08.png')
@@ -71,7 +71,7 @@ knitr::include_graphics('/images/efforts/Slide08.png')
 
 ---
 
-# <!--My work build --> 
+# <!--My Past Work 7--> 
 .center[</br></br>
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('/images/efforts/Slide09.png')
@@ -79,7 +79,7 @@ knitr::include_graphics('/images/efforts/Slide09.png')
 ]
 
 ---
-# <!--My work build --> 
+# <!--My Past Work 8--> 
 .center[</br></br>
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('/images/efforts/Slide10.png')
@@ -87,7 +87,7 @@ knitr::include_graphics('/images/efforts/Slide10.png')
 ]
 
 ---
-# <!--My work build --> 
+# <!--My Past Work 9--> 
 .center[</br></br>
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('/images/efforts/Slide11.png')
@@ -95,7 +95,7 @@ knitr::include_graphics('/images/efforts/Slide11.png')
 ]
 
 ---
-# <!--My work build --> 
+# <!--My Past Work 10--> 
 .center[</br></br>
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('/images/efforts/Slide12.png')
@@ -103,7 +103,7 @@ knitr::include_graphics('/images/efforts/Slide12.png')
 ]
 
 ---
-# <!--My work build --> 
+# <!--My Past Work 11--> 
 .center[</br></br>
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('/images/efforts/Slide13.png')
@@ -111,19 +111,22 @@ knitr::include_graphics('/images/efforts/Slide13.png')
 ]
 
 ---
-# <!--My work build --> 
+# <!--My Past Work 12--> 
 .center[</br></br>
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('/images/efforts/Slide14.png')
 ```
 ]
+???
+- In the business model -- we typically wouldn't waste money and time creating products without doing some sort of research, or like focus group to identify if and how the product would be used.
+- Research ecologists wokr in bubble--create products in isolation--get feedback from eachother RATHER than the end-users!
+- E.g., what would it take (hours, time, networks) for a research ecologist to reach out to *potential* end users of the data or software product -- is it worth their time? Is there a way we can make this more efficient (this is more of a career goal i think). This requires a cultural shift
 ---
-# <!--Data Flow1--> 
-.center[</br></br></br></br>
-```{r echo=FALSE, out.width='100%'}
-knitr::include_graphics('/images/my_research.png')
-```
-]
+
+class: inverse, left, middle
+# Flow of Science Products and Knowledge
+???
+- transition
 ---
 # Data and Science Products Often Flow Linearly
 .center[
@@ -131,7 +134,6 @@ knitr::include_graphics('/images/my_research.png')
 knitr::include_graphics('/images/use_continuum/Slide1.png')
 ```
 ]
-.footnote[[*] Ecological Society of America conference 2020 theme]
 ???
 - A typical trajectory of a science or data product flows from you, the data collector, curator, or manager --> research community --> maybe to practiioners
 - If you're either lucky or the product is vital or really amazing, maybe it will trickle up to decision makers?
@@ -158,11 +160,8 @@ knitr::include_graphics('/images/use_continuum/Slide3.png')
   - perhaps you conduct basic research, or are a natural historian
   - or maybe this is an overwhelming task that may not necessarily be rewarded within your community or profession?
 - There's a reason for these question marks -- __this is a daunting task!__
-- 
 ---
-class: inverse, middle, center
-# 
----
+
 # <!--Roughgarden Quote-->
 </br></br></br>
 > 'Most models in ecology are inteded for other ecologists, cooked up by scientists for consumption by other scientists'   _Roughgarden (1979)_  
@@ -186,6 +185,15 @@ class: inverse, middle, center
 - When I first came across this quote -- and it definitely was a mistake because I definitely was not reading her book when I found it! -- I couldnt get it out of my head. 
 - I think we can replace the word, models, here with other words, like 'data', 'results', 'articles', 'presentations', etc.
 ---
+---
+class: inverse, left, middle
+# USGS: Leading Efforts to Avoid the Linear Trajectory of Data and Science Products
+</br></br>
+--
+```{r echo=FALSE, out.width='20%'}
+knitr::include_graphics('/images/koolaid.jpg')
+```
+---
 # USGS Science Analytics & Synthesis
 </br>
 __Vision__: Synthesize and deliver Earth system data and information.
@@ -205,30 +213,6 @@ knitr::include_graphics('/images/sas-datascience.jpg')
 - Briefly, I am in a group of the Core Science Systems mission area of the USGS called Science Analytics and Synthesis. 
 ---
 
-# Harnessing the Data Revolution in Ecology
-
-.pull-left[
-```{r echo=FALSE, out.width='90%'}
-knitr::include_graphics('/images/poisot2019.png')
-```
-]
---
-.pull-right[
-```{r echo=FALSE, out.width='100%'}
-knitr::include_graphics('/images/fair.png')
-```
-]
-
-???
-- Next year's theme is ...
-- Not surprising given the amount and quality of data. 
-- However, there's still much work to be done, especially on front of open science. 
-- that is, full reproducibilty of our data, results, and other knowledge products
-- And I have recently joined a branch within the USGS which is leading efforts to achieve such a culture within relevant sciences. 
-
----
-class: inverse, center, middle
-class: inverse, center, middle
 # Abandoning a Linear Flow of Ecological Data and Knowledge Flow
 ---
 # Project Overview <!--1-->
@@ -276,7 +260,7 @@ knitr::include_graphics('/images/use_continuum/Slide9.png')
 
 ---
 
-class:inverse, middle, left
+class: inverse, left, middle
 # 1. Data Integration
 # 2. Integrated Population Models
 # 3. Software
@@ -285,6 +269,13 @@ class:inverse, middle, left
 - 
 - Over the course of my postdoc, I will be 
 
+---
+---
+class: inverse, left, middle
+# 1. __Data Integration__
+# 2. Integrated Population Models
+# 3. Software
+# 4. End-user Needs
 ---
 # Integrated Population Models
 ```{r echo=FALSE, out.width='100%'}
@@ -321,24 +312,21 @@ knitr::include_graphics('/images/gooseband.jpg')
 ]
 ---
 
-# Producing Actionable Science
-</br></br></br>
+class: inverse, left, middle
+# 1. Data Integration
+# 2. __Integrated Population Models__
+# 3. Software
+# 4. End-user Needs
+---
+# Integrated Population Models
 ```{r echo=FALSE, out.width='100%'}
-knitr::include_graphics('/images/quote_manager.png')
+knitr::include_graphics('/images/ipm.png')
 ```
-.footnote[Roux DJ, Rogers KH, Biggs H, Ashton PJ, Sergeant A. Bridging the science-management divide: Moving from unidirectional knowledge transfer to knowledge interfacing and sharing.]
-
+---
+class: inverse, left, middle
+# 1. Data Integration
+# 2. Integrated Population Models
+# 3. __Software__
+# 4. __End-user Needs__
 ---
 
-# Translational Ecology
-"the best teams are interdisciplinary and include members of the end-user community"
-
----
-class: inverse, center, middle
-# Fostering Communication Amongst Research, Practice, and Decision-making
-
----
-
-
----
-<!-- Lowndes, J.S.S., Best, B.D., Scarborough, C., Afflerbach, J.C., Frazier, M.R., O’Hara, C.C., Jiang, N. and Halpern, B.S., 2017. Our path to better science in less time using open data science tools. Nature ecology & evolution, 1(6), p.0160. -->
