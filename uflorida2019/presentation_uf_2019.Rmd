@@ -22,13 +22,33 @@ background-position: left 110px bottom 10px
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+class: inverse, left, middle
+
+# Brief Overview of Past and Ongoing Research
+???
+- I am thrilled to be here, because as many of you know, I actually obtained my bachelors and my master’s degrees from this department!
+- So, now the prodigal student has returned and she is super smart and has yet another tedious degree!
+- So I'd like to give a brief overview of some of my past work, as I think it really sets the stage for how the stars have aligned with this postdoc, and how great of a fit this is for the USGS. 
+---
+# <!--My Past Work 0--> 
+.center[</br></br>
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('/images/efforts/Slide01.png')
+```
+]
+???
+- I'd like to first start with an overview of my research to-date, including some ongoing projects
+- B/c I think it will tell a nice story of how I've come to be in the position I am in now
+- And how my previous works have influenced my perspective and appreciation for translational ecology, today.
+---
 # <!--My Past Work 1--> 
 .center[</br></br>
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('/images/efforts/Slide02.png')
 ```
 ]
-
+???
+- So, my research activities to date originate here in WEC, where exposure to birds by a one Katie Sieving really opened up the doors to research as a career option for me. 
 ---
 # <!--My Past Work 2--> 
 .center[</br></br>
@@ -36,7 +56,9 @@ knitr::include_graphics('/images/efforts/Slide02.png')
 knitr::include_graphics('/images/efforts/Slide03.png')
 ```
 ]
-
+???
+- My earliest works included field ornithology -- working with Dr. Sieving on various projects
+- Eventually designing my own project wherein we used playbacks of screaming titmice to determine whether we could draw in hawks and owls. 
 ---
 # <!--My Past Work 3--> 
 .center[</br></br>
@@ -44,7 +66,9 @@ knitr::include_graphics('/images/efforts/Slide03.png')
 knitr::include_graphics('/images/efforts/Slide04.png')
 ```
 ]
-
+.footnote[(_in prep_) intended for submission to  _Florida Field Naturalist_]
+???
+- An ongoing collaboration with Scott Robinson adn Andy Kratter at the museum includes using the data collected over past decades during the Gainesville, FL  Christmas Bird Count -- where we are using inference gained from these population trends to generalize guild trends in response to urbanization and habitat loss in North Central Florida.
 ---
 # <!--My Past Work 4--> 
 .center[</br></br>
@@ -52,34 +76,49 @@ knitr::include_graphics('/images/efforts/Slide04.png')
 knitr::include_graphics('/images/efforts/Slide05.png')
 ```
 ]
-
----
+???
+- Much of my work has also focused on non-native and invasive populations of fauna in North America. ---
 # <!--My Past Work 5--> 
 .center[</br></br>
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('/images/efforts/Slide06.png')
 ```
 ]
-
+???
+- For example, during my Masters here, I worked primarily with Mike MOulton to track and understand the factors influencing the distribution of arguably the best urban exploiter species, teh House Sparrow.
 ---
 # <!--My Past Work 6--> 
 .center[</br></br>
 ```{r echo=FALSE, out.width='100%'}
-knitr::include_graphics('/images/efforts/Slide08.png')
+knitr::include_graphics('/images/efforts/Slide07.png')
 ```
 ]
-
+???
+- Further work on non-native bird population trends and distribution includes using participatory science data to track range shifts and expansion in Eurasian Tree sparrows... 
 ---
 
 # <!--My Past Work 7--> 
 .center[</br></br>
 ```{r echo=FALSE, out.width='100%'}
-knitr::include_graphics('/images/efforts/Slide09.png')
+knitr::include_graphics('/images/efforts/Slide08.png')
 ```
 ]
+.footnote[[1] Burnett, J, N Gilbert, N Anich (_in prep_) Great Tit introductions to and distribution in North America.]
+???
+- Hunting down records of Great Tits in north america to get basic documentation of introduction and distribution
 
 ---
 # <!--My Past Work 8--> 
+.center[</br></br>
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('/images/efforts/Slide09.png')
+```
+]
+.footnote[[1] Burnett, J, N Gilbert, N Anich (_in prep_) Great Tit introductions to and distribution in North America. </br>Burnett, J, L Wszola, N Mirochnitchenko, E Stuber, M Bomberger Brown, J Carroll (_in prep_). [2] Gray Partridge distribution in North America: Changing landscapes for an introduced species. For submission to _Wildlife Biology_ ]
+???
+- And again using citizen science data to track the range shift and factors influencing the distrbution of the non-native Gray Partridge
+---
+# <!--My Past Work 9--> 
 .center[</br></br>
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('/images/efforts/Slide10.png')
@@ -87,7 +126,7 @@ knitr::include_graphics('/images/efforts/Slide10.png')
 ]
 
 ---
-# <!--My Past Work 9--> 
+# <!--My Past Work 10--> 
 .center[</br></br>
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('/images/efforts/Slide11.png')
@@ -95,38 +134,183 @@ knitr::include_graphics('/images/efforts/Slide11.png')
 ]
 
 ---
-# <!--My Past Work 10--> 
+# <!--My Past Work 11--> 
 .center[</br></br>
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('/images/efforts/Slide12.png')
 ```
 ]
-
+.footnote[[1] Burnett et al. (_under revision_) _American Malacological Bulletin_.]
 ---
-# <!--My Past Work 11--> 
+# <!--My Past Work 12--> 
 .center[</br></br>
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('/images/efforts/Slide13.png')
 ```
 ]
-
+???
+- Finally, other non-bird invasion work has included the spread and dsitribution of Eastern Redcedar into north american grasslands
+- And the social-ecological factors associated with its distribution
 ---
-# <!--My Past Work 12--> 
+# <!--My Past Work 13--> 
 .center[</br></br>
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('/images/efforts/Slide14.png')
 ```
 ]
 ???
-- In the business model -- we typically wouldn't waste money and time creating products without doing some sort of research, or like focus group to identify if and how the product would be used.
-- Research ecologists wokr in bubble--create products in isolation--get feedback from eachother RATHER than the end-users!
-- E.g., what would it take (hours, time, networks) for a research ecologist to reach out to *potential* end users of the data or software product -- is it worth their time? Is there a way we can make this more efficient (this is more of a career goal i think). This requires a cultural shift
+- Finally, my dissertation resaerch largely focused on statistical and nuemrical methods for identifying ecological regime shifts in community-level data. 
+- Briefly, regime shifts are described as changes in the underlying structure or functioning of a system
+- These shifts are particularly of interest when they affect human well-being, or economies
+---
+# <!--My Past Work 13--> 
+.center[</br></br>
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('/images/efforts/Slide15.png')
+```
+]
+???
+- Finally, my dissertation resaerch largely focused on statistical and nuemrical methods for identifying ecological regime shifts in community-level data. 
+- Briefly, regime shifts are described as changes in the underlying structure or functioning of a system
+- These shifts are particularly of interest when they affect human well-being, or economies
+---
+# <!--My Past Work 14--> 
+__<u>Theme 1</u>__: Synthesize and review regime shift methods and literature
+
+--
+
+__<u>Theme 2</u>__: Test the utility and efficacy of methods
+
+--
+
+__<u>Theme 3</u>__: Improve method accessibility
+
+
+???
+- For example, the death or bleaching of a coral reef system impacts not only the ecological system itself, but also impacts the human communities relying on its health
+- For example, local ecotourism and fisheries may take a hit
+
+---
+# <!--My Past Work 15--> 
+.center[</br></br>
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('/images/efforts/Slide16.png')
+```
+]
+???
+- Although numerous methods are proposed for identifying ecological regime shifts, these methods often produce false negatives, false positives, and rare do multiple methods produce similar results as to the location in time or space of an ecological regime shift. 
+- In an attempt to get a bit closer to an understanding of when and where a method can be used, I applied numerous methods to empirical and simulated data. 
+- Empirical multi-species time series, like this paleodiatom time series, are particvularly tricky when attempting to use some of the more established methods. 
+
+---
+# <!--My Past Work 15--> 
+.center[</br></br>
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('/images/efforts/Slide17.png')
+```
+]
+???
+- For example, the coefficient of variation, or the ratio of mean to variance over some period of time within an individual species, produces spaghetti plots
+- Or uninterpretable results, when examining the entire community. 
+---
+# <!--My Past Work 15--> 
+.center[</br></br>
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('/images/efforts/Slide18.png')
+```
+]
+.footnote[[1] Burnett, J, N Price, and A Tyre. (_in prep_). Distance travelled and velocity of distance travelled as a measure of abrupt change in multivariable ecological data.</br> [2] Burnett, J and N Price (2018). `regimeDetectionMeasures`: An R package for calculating univariate and multivariate regime detection measures.]
+???
+- Notably, in studying methods in detail, we identified a hidden method, rate of change of the distance travelled, sort of buried within the complicated steps of an alternative method. 
+- We are calling this method, 'velocity', as it is a measure of the rate of change of an entire community, or multiple variables, over a period of time. 
+
+---
+# <!--My Past Work 15--> 
+.center[</br></br>
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('/images/efforts/Slide19.png')
+```
+]
+???
+.footnote[[1] Burnett, J, E Rovenskaya, B Fath (_in prep_). Using resampling techniques to evaluate relative performance of regime detection measures.]
+---
+# <!--My Past Work 15--> 
+.center[</br></br>
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('/images/efforts/Slide20.png')
+```
+]
+???
+- Been trying top operate within and promote the culture of open science
+- Especially as it relates to making avalable data and result generation methods and code to the public
+- E.g., using GitHub, or stable repositories
+---
+# <!--My Past Work 15--> 
+.center[</br></br>
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('/images/efforts/Slide21.png')
+```
+]
+.footnote[github.com/trashbirdecology/regimedetectionmeasures]
+
+???
+---
+# <!--My Past Work 15--> 
+.center[</br></br>
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('/images/efforts/Slide22.png')
+```
+]
+.footnote[github.com/trashbirdecology/bbsAssistant]
+???
+---
+# <!--My Past Work 15--> 
+.center[</br></br>
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('/images/efforts/Slide23.png')
+```
+]
+???
+- And so all of the previously described efforts have led to my arpeciation for informaiton science 
+- that is, 
+  - how are we communicating our data and science products
+  - how can we improve or methods of communication, sharing, reproducibility, etc.?
 ---
 
+# <!--My Past Work 15--> 
+.center[</br></br>
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('/images/efforts/Slide25.png')
+```
+]
+???
+- However, I argue that, if I am to continue down this previous path, sure I will produce decent science and some cool tools
+- But these efforts may be futile ... __NEXT SLIDE__
+---
+# <!--My Past Work 15--> 
+.center[</br></br>
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('/images/efforts/Slide26.png')
+```
+]
+???
+- Unless I make a serious effort to elicit and incorporate the needs of potential end-users, pracitioners, and decision makers
+---
+.center[
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('/images/my_research.png')
+```
+]
+???
+- So, to date, my research, which I have really enjoyed, can be generalized as comprising the following:
+  - data management
+    - so how do we store, retrieve, manipulate, and share data
+  - and the modelling efforts associated with specific data, places, species, and phenomenon
+---
 class: inverse, left, middle
 # Flow of Science Products and Knowledge
 ???
-- transition
+- But, as mentioned earlier, to make my science actionable requires understanding where my science is and is NOT going, and where I can make adjustments to improve its quality and dissemination. 
 ---
 # Data and Science Products Often Flow Linearly
 .center[
@@ -135,8 +319,10 @@ knitr::include_graphics('/images/use_continuum/Slide1.png')
 ```
 ]
 ???
-- A typical trajectory of a science or data product flows from you, the data collector, curator, or manager --> research community --> maybe to practiioners
-- If you're either lucky or the product is vital or really amazing, maybe it will trickle up to decision makers?
+- A stylized version of the flow of a science or data product flows  is as follows:
+  - maybe it starts at he collector and curator, someone analyzes it or makes inference from it
+  - Next, if you're lucky, either the data or science product goes to a practitioner
+  - And even more rarely does that science trickle up to the deicsion makers. 
 ---
 # Data and Science Products Often Flow Linearly
 .center[
@@ -145,8 +331,9 @@ knitr::include_graphics('/images/use_continuum/Slide2.png')
 ```
 ]
 ???
-- But how often do practitioners influence your science?
+- But for many of us, how often can we say that practitioners are influencing our science, or the way we communicate our science?
 - How often do you hear from praxctitioners?
+- How often do __you reach out__? to pracitioners?
 ---
 # Data and Science Products Often Flow Linearly
 .center[
@@ -167,27 +354,30 @@ knitr::include_graphics('/images/use_continuum/Slide3.png')
 > 'Most models in ecology are inteded for other ecologists, cooked up by scientists for consumption by other scientists'   _Roughgarden (1979)_  
 
 .footnote[[1] Theory of population genetics and evolutionary ecology: an introduction.]
+???
+- I'd like to interject here with a quote from Joan Roughgarden -- which I stumbled across some time ago because I definitely wasn't purposefully reading this book:
+  -  < read quote>
+  - "most models in ecology are intended for other ecologists, cooked up by scientists, for consuption by other scientists". 
+- This is really moving -- especially for someone who is a self-described science hermit who has yet to really, truly reach out to practitioners or decision makers to try to make her science relevant to societal needs. 
+- I think it's fair to say that we can replace the word, models, here with other words, like 'data', 'results', 'articles', 'presentations', etc.
+
 --
+
 - __data__
 
 --
 - __results__
---
 
+--
 - __papers__
---
 
+--
 - __presentations__
 
 
-???
-- I'd like to start my talk by relaying to you one of my favorite quotes from Joan Roughgarden: "most models in ecology are intended for other ecologists, cooked up by scientists, for consuption by other scientists". 
-- When I first came across this quote -- and it definitely was a mistake because I definitely was not reading her book when I found it! -- I couldnt get it out of my head. 
-- I think we can replace the word, models, here with other words, like 'data', 'results', 'articles', 'presentations', etc.
----
 ---
 class: inverse, left, middle
-# USGS: Leading Efforts to Avoid the Linear Trajectory of Data and Science Products
+# Avoiding the Linear Trajectory of Data and Science Products
 </br></br>
 --
 ```{r echo=FALSE, out.width='20%'}
@@ -212,8 +402,17 @@ knitr::include_graphics('/images/sas-datascience.jpg')
     - AND 
 - Briefly, I am in a group of the Core Science Systems mission area of the USGS called Science Analytics and Synthesis. 
 ---
+# USGS Science Analytics & Synthesis <!--SAS groups-->
 
-# Abandoning a Linear Flow of Ecological Data and Knowledge Flow
+
+---
+# USGS Science Analytics & Synthesis <!--SAS big products-->
+.pull-left[
+```{r echo=FALSE, out.width='90%'}
+knitr::include_graphics('/images/sas-.jpg')
+```
+]
+
 ---
 # Project Overview <!--1-->
 .center[
