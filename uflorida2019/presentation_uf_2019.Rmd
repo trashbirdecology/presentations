@@ -19,8 +19,9 @@ background-image: url(images/USGS_logo.png)
 background-size: 10%
 background-position: left 110px bottom 10px 
 ---
-```{r setup, include=FALSE}
+```{r include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+pagedown::chrome_print("presentation_uf_2019.Rmd")
 ```
 class: inverse, left, middle
 
@@ -34,7 +35,6 @@ class: inverse, left, middle
 .center[</br></br>
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('/images/efforts/Slide01.png')
-# pagedown::chrome_print("path/to/your/slides.Rmd")
 ```
 ]
 ???
@@ -78,7 +78,8 @@ knitr::include_graphics('/images/efforts/Slide05.png')
 ```
 ]
 ???
-- Much of my work has also focused on non-native and invasive populations of fauna in North America. ---
+- Much of my work has also focused on non-native and invasive populations of fauna in North America. 
+---
 # <!--My Past Work 5--> 
 .center[</br></br>
 ```{r echo=FALSE, out.width='100%'}
