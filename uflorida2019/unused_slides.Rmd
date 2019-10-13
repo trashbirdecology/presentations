@@ -63,4 +63,16 @@ class: inverse, left, middle
 ---
 
 
+# Project Overview <!--7-->
+.center[
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('/images/use_continuum/Slide9.png')
+```
+]
+???
+1. The abundance data comes from teh North American Breeding Bird Sruvey.
+  - Which is a roadside, annual point count
+  - Takes place in the breeding months across much of the US and parts of Canada
+2. And bird encounter histories from the North American bird banding program -- the Bird Banding Lab.
+---
 <!-- Lowndes, J.S.S., Best, B.D., Scarborough, C., Afflerbach, J.C., Frazier, M.R., O’Hara, C.C., Jiang, N. and Halpern, B.S., 2017. Our path to better science in less time using open data science tools. Nature ecology & evolution, 1(6), p.0160. -->

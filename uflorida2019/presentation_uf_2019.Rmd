@@ -34,6 +34,7 @@ class: inverse, left, middle
 .center[</br></br>
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('/images/efforts/Slide01.png')
+# pagedown::chrome_print("path/to/your/slides.Rmd")
 ```
 ]
 ???
@@ -402,61 +403,103 @@ knitr::include_graphics('/images/sas-datascience.jpg')
     - AND 
 - Briefly, I am in a group of the Core Science Systems mission area of the USGS called Science Analytics and Synthesis. 
 ---
-# USGS Science Analytics & Synthesis <!--SAS groups-->
 
+# Data and Science Products at the USGS:
+# __F.__   indable </br>__A.__ccessible<br> __I.__&nbsp;&nbsp;nteroperable<br> __R.__ eusable 
+???
+- In recent years, major efforts are being made within our agency to integrate data, and improve the accessibility, interoper
+- For example, the BISON project integrates various species occurrence datasets with various land usde and land cover data to produce the species distibuiton models and maps shown previously
 
 ---
-# USGS Science Analytics & Synthesis <!--SAS big products-->
+# USGS Science Analytics & Synthesis: Integrated Science Products <!--SAS big products-->
 .pull-left[
-```{r echo=FALSE, out.width='90%'}
-knitr::include_graphics('/images/sas-.jpg')
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('/images/sas-gap1.png')
+```
+<br>
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('/images/sas-gap.png')
 ```
 ]
-
+???
+- A couple of the bigger biodiveristy data projects within our group include the 
+  - GAP: which comprises speices distirbuiton predicitons, land cover, and protected areas database.
+- NEXT
+--
+.pull-right[
+```{r echo=FALSE, out.width='90%'}
+knitr::include_graphics('/images/sas-bison.png')
+```
+]
+???
+- BISON - biodiveristy information for the U.S.
 ---
+
 # Project Overview <!--1-->
+???
+- So, long story only slighty shortened there --
+- I recently joined this really amazing group of scientists at the USGS, and am left then with 
+--
+.center[
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('/images/use_continuum/Slide3.png')
+```
+]
+???
+- And bring you back to the major issues related to creating and disemminating data and science products in ecology:
+- Can we, and if so how, can we solicit and incorporate end-user needs into our science and data procuts?
+---
+
+# Project Overview <!--2-->
 .center[
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('/images/use_continuum/Slide4.png')
 ```
 ]
+???
+- My postdoctoral research can be described as having a few overarching themes
+- First, I will work on integrating existing federal science products: genearlly identifyihng if and how we can integrate them for general use and inference, but also
+- How we can integrate them for use in specific, place-based models
 ---
-# Project Overview <!--2-->
+
+# Project Overview <!--3-->
 .center[
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('/images/use_continuum/Slide5.png')
 ```
 ]
+???
+- Next, of course, I am interested in making available said integration and modelling efforts via software
+
 ---
-# Project Overview <!--3-->
+# Project Overview <!--4-->
 .center[
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('/images/use_continuum/Slide6.png')
 ```
 ]
+???
+- And perhaps most ambitiously, building these products with all stakeholders in the decision making process in mind. 
 ---
-# Project Overview <!--4-->
+# Project Overview <!--5-->
 .center[
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('/images/use_continuum/Slide7.png')
 ```
 ]
+???
+- To even attempt to achieve these fairly ambitious goals, however, we will use a rapidly developing ecological modelling frameowork:
+  - Integrated Population models
 ---
-# Project Overview <!--5-->
+# Project Overview <!--6-->
 .center[
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('/images/use_continuum/Slide8.png')
 ```
 ]
-
----
-# Project Overview <!--6-->
-.center[
-```{r echo=FALSE, out.width='100%'}
-knitr::include_graphics('/images/use_continuum/Slide9.png')
-```
-]
-
+???
+- Very btiefly, Integrated populatoin models are models which use an integrated data product
+  - At its most basic level--using abundance data combined with mark-recapture data. 
 ---
 
 class: inverse, left, middle
@@ -465,16 +508,16 @@ class: inverse, left, middle
 # 3. Software
 # 4. End-user Needs
 ???
-- 
-- Over the course of my postdoc, I will be 
+- So there are a lot of ocmponents to this project, but in order to achieve relevance for end-users, must develop synchronously. 
+---
 
----
----
 class: inverse, left, middle
 # 1. __Data Integration__
 # 2. Integrated Population Models
 # 3. Software
 # 4. End-user Needs
+???
+- So we start with the data integration
 ---
 # Integrated Population Models
 ```{r echo=FALSE, out.width='100%'}
@@ -482,7 +525,7 @@ knitr::include_graphics('/images/ipm.png')
 ```
 ---
 
-# Data: Breeding Bird Surveys (USGS)
+# Abundance Data: USGS Breeding Bird Survey
 .pull-left[
 ```{r echo=FALSE, out.width='65%'}
 knitr::include_graphics('/images/bbs-logo.jpg')
@@ -492,14 +535,21 @@ knitr::include_graphics('/images/bbs-logo.jpg')
 knitr::include_graphics('/images/robbins.jpg')
 ```
 ]
+???
+- So we will be working with the BBS data
+- The BBS data are roadside point counts conducted in much fo the US and Canada every breeding season
+
 --
 .pull-right[ </br>
 ## Distribution
 ## Status
 ## Trends
 ]
+???
+- The program was designed primarily to gather intel on population status and trends, but has been used to develop and advance various ecological models 
+
 ---
-# Data: Bird Encounters (USGS)
+# Encounter Data: USGS Bird Banding Lab
 .pull-left[
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('/images/gooseband.jpg')
@@ -509,6 +559,11 @@ knitr::include_graphics('/images/gooseband.jpg')
 ## Demographic parameters
 ## Distribution
 ]
+???
+- The BBL curates all information for birds captured and banded
+- The BBL curates  millions of mark-recapture records
+- And has been used to  inform demographic paramter estimation  and distribution
+
 ---
 
 class: inverse, left, middle
@@ -516,16 +571,163 @@ class: inverse, left, middle
 # 2. __Integrated Population Models__
 # 3. Software
 # 4. End-user Needs
+
+???
+- So, what is an itnegrated population model?
+
 ---
 # Integrated Population Models
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('/images/ipm.png')
 ```
+???
+- Integrated population models are models which incorporate data from mark-recaptures and from abundance data (for example, BBS point counts)
+- The beauty here, of course, is that one, to a certain degree, can combine data from disparate sources to estimate paramters within sub-models of the full population models
+- Together, these two data can be used to synchronously estimate the true abundance of the population, by 
+  - usign the BBL to inform apparent survival estimates, or phi
+  - and using BBS to inform immigration & perhaps also observation errors.
+  
 ---
 class: inverse, left, middle
 # 1. Data Integration
 # 2. Integrated Population Models
 # 3. __Software__
-# 4. __End-user Needs__
+# 4. End-user Needs
+
+???
+- The software part  simple 
 ---
 
+# Software Goals
+### Short-term
+  1. Munge, integrate BBS and BBL data 
+  1. Integrate at multiple spatial scales 
+  1. Place-based, limited extents
+  1. Off-line
+### Long-term
+  1. Incorporate land use/land cover
+  1. Run integrated population models
+  1. Broad-scale (U.S., Canada)
+  1. On-line
+
+
+---
+class: inverse, left, middle
+# 1. Data Integration
+# 2. Integrated Population Models
+# 3. Software
+# 4. __End-user Needs__
+
+???
+- And finally, how do we produce these data and science products which have high utility to end-users
+
+---
+# Identify and Incorporate End-user Needs
+## Challenges
+  1. Who are the end-users?
+--
+  2. Who the data and science feasibly serve?
+--
+  3 Iterative feedbck to identify end-user 
+    - __needs__
+    - __actual use__  
+--
+  4. Producing adaptable products
+---
+# Identify and Incorporate End-user Needs
+## Approach
+  1. Working groups 
+    - data curators/managers
+    - modellers/analysts
+    - back-end developers
+    - practitioners
+    - decision makers
+--
+  2. Iterative feedback 
+
+---
+# Anticipated Products
+1. __Software__
+  - Data integration
+  - Integrated population models
+--
+2. __Roadmap__ 
+  - Integration for population models
+  - Identify and incorporate end-users
+
+---
+# Collaborators 
+.pull-left[
+<!-- ### USGS Postdoc -->
+- Tristan Wellman
+- Karen Jenni
+- Sky Bristol
+- Steve Aulenbach
+- Ken Bagstad
+- Andy Royle
+- Kevin Pope
+- Drew Tyre
+- Lyndsie Wszola
+- Gabby Palomo
+]
+.pull-right[
+<!-- ### Other  Ongoing Work -->
+- Nat Price
+- Brian Fath
+- Christie Bahlai
+- Eric Pedersen
+- Easton White
+- Xavier Benito
+]
+---
+
+# Some Relevant Plugs
+### https://www.usgs.gov/centers/cdi
+
+```{r echo=FALSE, out.width='80%'}
+knitr::include_graphics('/images/cdi_logo.png')
+```
+
+```{r echo=FALSE, out.width='40%'}
+knitr::include_graphics('/images/cdi.png')
+```
+
+---
+
+# Funding/Opportunities: Grad Students
+
+## Summer Program in Austria: Systems Analysis
+![](images/iiasa_logo.png)
+![](images/iiasa1.png)
+---
+
+
+# Funding/Opportunities: All Students!
+
+## USGS Pathways
+- For undergraduate & graduate students
+- Leads to permanent employment
+
+![](images/pathways.png)
+
+---
+
+# Funding/Opportunities: Grad Students
+
+## Summer Program in Austria: Systems Analysis
+![](images/iiasa_logo.png)
+![](images/iiasa1.png)
+
+---
+# Funding/Opportunities: Postdocs
+###  usgs.gov/centers/mendenhall/
+- For senior graduate students and post-docs
+<br><br><br>
+![](images/mendenhall.png)
+---
+
+# Theoretical, Quantitative Ecology Ph.D. Assistantship
+### Tenhumberg Lab, University of Nebraska-Lincoln
+```{r echo=FALSE, out.width='60%'}
+knitr::include_graphics('/images/tenhumberg.png')
+```
