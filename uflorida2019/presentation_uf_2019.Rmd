@@ -22,7 +22,7 @@ background-position: left 110px bottom 10px
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-# <!--Quote about models -->
+# <!--Quote about models-->
 </br>
 
 
@@ -48,22 +48,117 @@ knitr::opts_chunk$set(echo = TRUE)
 - When I first came across this quote -- and it definitely was a mistake because I definitely was not reading her book when I found it! -- I couldnt get it out of my head. 
 - I think we can replace the word, models, here with other words, like 'data', 'results', 'articles', 'presentations', etc.
 ---
-
 class: inverse, center, middle
-# About Me
+# Past and Ongoing Research 
+
 ---
-# About Me
+
+# <!--My work build --> 
 .center[</br></br>
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('/images/efforts/Slide02.png')
+```
+]
+
+---
+# <!--My work build --> 
+.center[</br></br>
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('/images/efforts/Slide03.png')
+```
+]
+
+---
+# <!--My work build --> 
+.center[</br></br>
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('/images/efforts/Slide04.png')
+```
+]
+
+---
+# <!--My work build --> 
+.center[</br></br>
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('/images/efforts/Slide05.png')
+```
+]
+
+---
+# <!--My work build --> 
+.center[</br></br>
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('/images/efforts/Slide06.png')
+```
+]
+
+---
+# <!--My work build --> 
+.center[</br></br>
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('/images/efforts/Slide08.png')
+```
+]
+
+---
+
+# <!--My work build --> 
+.center[</br></br>
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('/images/efforts/Slide09.png')
+```
+]
+
+---
+# <!--My work build --> 
+.center[</br></br>
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('/images/efforts/Slide10.png')
+```
+]
+
+---
+# <!--My work build --> 
+.center[</br></br>
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('/images/efforts/Slide11.png')
+```
+]
+
+---
+# <!--My work build --> 
+.center[</br></br>
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('/images/efforts/Slide12.png')
+```
+]
+
+---
+# <!--My work build --> 
+.center[</br></br>
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('/images/efforts/Slide13.png')
+```
+]
+
+---
+# <!--My work build --> 
+.center[</br></br>
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('/images/efforts/Slide14.png')
+```
+]
+
+---
+
+# <!--My work build --> 
+.center[</br></br></br></br>
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('/images/my_research.png')
 ```
 ]
-
-
 ---
-
 class: inverse, center, middle
-# Data and Information Flow in Ecology:
 # Turning data into actionable knowledge
 ---
 
@@ -78,6 +173,9 @@ __Mission__: Accelerate research and decisionmaking through data science, inform
 knitr::include_graphics('/images/sas-datascience.jpg')
 ```
 ]
+???
+- Briefly, I am in a group of the Core Science Systems mission area of the USGS called Science Analytics and Synthesis. 
+- Our group comprises 
 
 ---
 
@@ -104,34 +202,45 @@ knitr::include_graphics('/images/fair.png')
 
 ---
 class: inverse, center, middle
-# Data and Knowledge Flow in Translational Ecology:
-
+# Abandoning a Linear Flow of Ecological Data and Knowledge Flow
 ---
-
-# Data and Knowledge Flow
+# Data and Science Products Often Flow Linearly
 .center[
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('/images/use_continuum/Slide1.png')
 ```
 ]
 .footnote[[*] Ecological Society of America conference 2020 theme]
+???
+- A typical trajectory of a science or data product flows from you, the data collector, curator, or manager --> research community --> maybe to practiioners
+- If you're either lucky or the product is vital or really amazing, maybe it will trickle up to decision makers?
 ---
-
-# Incorporating Practitioner Needs
+# Data and Science Products Often Flow Linearly
 .center[
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('/images/use_continuum/Slide2.png')
 ```
 ]
+???
+- But how often do practitioners influence your science?
+- How often do you hear from praxctitioners?
 ---
-
-# Incorporating Decision Making Needs
- 
+# Data and Science Products Often Flow Linearly
 .center[
 ```{r echo=FALSE, out.width='100%'}
 knitr::include_graphics('/images/use_continuum/Slide3.png')
 ```
 ]
+???
+- Or how often do you seek feedback or try to identify the needs of end users?
+- If never or rarely, there's reasonable explanations - 
+  - perhaps you conduct basic research, or are a natural historian
+  - or maybe this is an overwhelming task that may not necessarily be rewarded within your community or profession?
+- There's a reason for these question marks -- __this is a daunting task!__
+- 
+---
+class: inverse, middle, center
+# 
 ---
 # Project Overview 
 .center[
@@ -178,6 +287,18 @@ knitr::include_graphics('/images/use_continuum/Slide9.png')
 
 ---
 
+class:inverse, middle, center
+# Integrated Population Modelling
+???
+- Over the course of my postdoc, I will be 
+Itegrated population models 
+---
+# Integrated Population Models
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('/images/ipm.png')
+```
+---
+
 # Data: Breeding Bird Surveys (USGS)
 .pull-left[
 ```{r echo=FALSE, out.width='65%'}
@@ -188,11 +309,9 @@ knitr::include_graphics('/images/bbs-logo.jpg')
 knitr::include_graphics('/images/robbins.jpg')
 ```
 ]
-
 --
-
 .pull-right[ </br>
-## Distributions
+## Distribution
 ## Status
 ## Trends
 ]
@@ -204,23 +323,25 @@ knitr::include_graphics('/images/gooseband.jpg')
 ```
 ]
 .pull-right[ </br>
-## distributions
-## status
-## trends
-```{r echo=FALSE, out.width='100%'}
-# knitr::include_graphics('/images/.png')
-```
+## Demographic parameters
+## Distribution
 ]
 ---
 
-# Integrated Models
+# Producing Actionable Science
+</br></br></br>
 ```{r echo=FALSE, out.width='100%'}
-knitr::include_graphics('/images/.png')
+knitr::include_graphics('/images/quote_manager.png')
 ```
+.footnote[Roux DJ, Rogers KH, Biggs H, Ashton PJ, Sergeant A. Bridging the science-management divide: Moving from unidirectional knowledge transfer to knowledge interfacing and sharing.]
 
 ---
 
-# Integrated Population Models
-```{r echo=FALSE, out.width='100%'}
-knitr::include_graphics('/images/ipm.png')
-```
+# Translational Ecology
+"the best teams are interdisciplinary and include members of the end-user community"
+
+---
+class: inverse, center, middle
+# Fostering Communication Amongst Research, Practice, and Decision-making
+
+---

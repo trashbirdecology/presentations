@@ -45,7 +45,6 @@ knitr::include_graphics('/images/gooseband.jpg')
 
 
 
-
 # Maximizing Federal Science Products & Translational Ecology
 
 --
