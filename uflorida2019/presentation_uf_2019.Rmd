@@ -21,7 +21,8 @@ background-position: left 110px bottom 10px
 ---
 ```{r include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-pagedown::chrome_print("presentation_uf_2019.Rmd")
+# RUN THE FOLLOWING IN THE CONSOLE TO CONVERT TO STABLE HTML OR PDF!
+# pagedown::chrome_print("presentation_uf_2019.Rmd")
 ```
 class: inverse, left, middle
 
