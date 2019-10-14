@@ -26,6 +26,13 @@ knitr::opts_chunk$set(echo = TRUE)
 # RUN THE FOLLOWING IN THE CONSOLE TO CONVERT TO STABLE HTML OR PDF!
 # pagedown::chrome_print("presentation_uf_2019.Rmd")
 ```
+
+# Indigienous People's Day
+</br></br>
+.center[![](http://www.native-languages.org/images/florida.jpg)]
+???
+- extinct timicua
+---
 class: inverse, left, middle
 
 # Brief Overview of Past and Ongoing Research
@@ -119,7 +126,7 @@ knitr::include_graphics('/images/efforts/Slide08.png')
 knitr::include_graphics('/images/efforts/Slide09.png')
 ```
 ]
-.footnote[[1] Burnett, J, N Gilbert, N Anich (_in prep_) Great Tit introductions to and distribution in North America. </br>Burnett, J, L Wszola, N Mirochnitchenko, E Stuber, M Bomberger Brown, J Carroll (_in prep_). [2] Gray Partridge distribution in North America: Changing landscapes for an introduced species. For submission to _Wildlife Biology_ ]
+.footnote[[1] Burnett, J, N Gilbert, N Anich (_in prep_) Great Tit introductions to and distribution in North America. </br>[2] Burnett, J, L Wszola, N Mirochnitchenko, E Stuber, M Bomberger Brown, J Carroll (_in prep_). Gray Partridge distribution in North America: Changing landscapes for an introduced species.]
 ???
 - And again using citizen science data to track the range shift and factors influencing the distrbution of the non-native Gray Partridge
 ---
@@ -356,7 +363,7 @@ knitr::include_graphics('/images/use_continuum/Slide3.png')
 
 # <!--Roughgarden Quote-->
 </br></br></br>
-> 'Most models in ecology are inteded for other ecologists, cooked up by scientists for consumption by other scientists'   _Roughgarden (1979)_  
+> 'Most models in ecology are intended for other ecologists, cooked up by scientists for consumption by other scientists'   _Roughgarden (1979)_  
 
 .footnote[[1] Theory of population genetics and evolutionary ecology: an introduction.]
 ???
@@ -523,12 +530,6 @@ class: inverse, left, middle
 ???
 - So we start with the data integration
 ---
-# Integrated Population Models
-```{r echo=FALSE, out.width='100%'}
-knitr::include_graphics('/images/ipm.png')
-```
----
-
 # Abundance Data: USGS Breeding Bird Survey
 .pull-left[
 ```{r echo=FALSE, out.width='65%'}
