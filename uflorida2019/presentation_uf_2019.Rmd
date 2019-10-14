@@ -390,11 +390,11 @@ knitr::include_graphics('/images/use_continuum/Slide3.png')
 ---
 class: inverse, left, middle
 # Avoiding the Linear Trajectory of Data and Science Products
-</br></br>
---
-```{r echo=FALSE, out.width='20%'}
-knitr::include_graphics('/images/koolaid.jpg')
-```
+<!-- </br></br> -->
+<!-- -- -->
+<!-- ```{r echo=FALSE, out.width='20%'} -->
+<!-- knitr::include_graphics('/images/koolaid.jpg') -->
+<!-- ``` -->
 ---
 # USGS Science Analytics & Synthesis
 </br>
