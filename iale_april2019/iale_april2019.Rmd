@@ -1,0 +1,327 @@
+---
+title: "System Velocity:"
+subtitle: "**A new method for dimension reduction and ecological regime shift detection** </br> </br> **Jessica L. Burnett**"
+author: "N.B. Price, A.J. Tyre, C.R. Allen, D.G. Angeler, & D. Twidwell"
+institute: "</br> @trashbirdecol </br> GitHub: trashbirdecology"
+date: "2019.04.10"
+output:
+  xaringan::moon_reader:
+    chakra: libs/remark-latest.min.js # to load the last saved verion for offline use
+    css: ["myFonts.css", "myTheme.css"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```{r setup, message=FALSE, warning=FALSE, cache=TRUE, echo=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(include = FALSE, warning=FALSE, message=FALSE, cache=TRUE,fig.path="/figures")
+pkgs <- c("tidyverse", "here", "xaringan", "knitr")
+# create a function to load packages
+loadPkgs <- function(packages) {
+  for(package_name in packages)
+  {library(package_name,character.only=TRUE, quietly = TRUE);}
+}
+loadPkgs(pkgs)
+
+# Plotting shit
+theme_set(theme_bw())
+```
+
+# Ecological Regime Shifts  <!-- what how goal -->
+## **what?**  a persistent change in the structure or functioning of a system 
+</br>  
+???
+
+- A **persistent change in the sturcture or functioning of a system**
+
+--
+
+## **how?** loss of negative feedback(s) maintaining the system
+<br>
+
+???
+
+- Regime shifts occur, via a number of pathways, when a system **loses the negative feedback(s) maintaining** the system in its current state
+
+- Again, *goal* is to predict in time to prevent something bad from happening. Pipe dream? Probably...
+
+
+--
+
+## **goal?** predict in time to prevent  
+
+???
+- goal is to predict regime shifts in time to either prevent or create a plan of action for timely mitigation
+
+
+---
+
+# Regime Shifts <!-- coral RS pic -->
+```{r, echo=FALSE, out.width="100%"}
+knitr::include_graphics("https://static1.squarespace.com/static/5a5906400abd0406785519dd/t/5b7b180a6d2a7356c60f4ec4/1534793794260/IYORBank_BeforeAndAfter_TheOceanAgency_07.jpg")
+```
+
+.footnote[Image credit: [The Ocean Agency](https://static1.squarespace.com/static/5a5906400abd0406785519dd/t/5b7b180a6d2a7356c60f4ec4/1534793794260/IYORBank_BeforeAndAfter_TheOceanAgency_07.jpg)]
+???
+
+---
+
+# Ecosystems are Complex <!-- characteristics -->  
+###*(and complicated)*
+#### - high dimensional    
+#### - many ( $\infty$ ?) interactions  
+#### - non-linear  
+#### - non-ergodic (open)   
+#### - dynamic  
+
+???
+Ecosystems are 
+- high dimensional, especially as we increase scale system extent
+- which leads to a higher number of interactions
+- increasingly realizing these are non-linear interactions
+- non-ergodic
+- because they are open, they are obviously dynamic.
+
+
+--
+#### - **difficult to model mathematically**     
+
+???
+B/c dynamic --> difficult to model mathematically 
+
+Especially as we move beyonbd just a handful of state  variables.
+---
+
+
+# (Too Many) Methods for Detecting Regime Shifts  <!--lit review-->
+### $> 70$ (!) methods proposed in literature
+### $10$ suitable for multivariable data
+### few explicitly handle **noisy** data
+### few explicitly handle **irregular sampling**
+
+???
+
+- Briefly, I'll mention that the number of **methods proposed** for as regime shift detetion methods is **staggering**. 
+- Because many of these methods come from the climatological and marine sciences,where we're looking for abrupt shifts in say Arctic Cod,  about 1/3 are suitabnle for multivariable data
+- And surprisingly, none explicitly handle noisy data
+
+---
+
+# Regime Shifts Detection Methods   <!-- popular methods -->
+  ###   Rising Variance/Critical Slowing Down
+  ###   Variance Index (max eigenvalue of covariance matrix)
+  ###   Principal Coordinates Analysis
+--
+  
+  ###   **Fisher Information**
+  
+--
+
+  ### **Velocity**, $v$
+
+???
+
+- A few of the methods capable of handling multivariable data variance, PCA and an obscure method called, Fisher Information. 
+
+- And its from FI where we derived a new method that I am described today, called **Velocity**
+
+---
+
+# Toy System   <!-- toy system -->
+```{r, echo=FALSE, out.width="55%", fig.align="center"}
+knitr::include_graphics(paste0(here::here(),"/figures/exData.png"))
+```
+
+$$ x ~ normal(\mu = 25, \sigma = 5) \textrm{ for t } < 50$$
+$$x ~ normal(\mu =100, \sigma = 5) \textrm{ for t } \geq 50$$
+???
+So the calculations for **velocity** are quite simple, and I am goign to step through the few steps first using this simple 2-variable system, where I induced a change in mean of state variables at time t = 50. 
+
+---
+
+# Velocity, $v = \frac{\Delta s}{\Delta t}$ 
+#### the **linear speed** of a system's **trajectory** (e.g., in phase space)
+
+.pull-left[
+```{r, echo=FALSE, out.width="100%", fig.align="center"}
+knitr::include_graphics(paste0(here::here(),"/figures/exData.png"))
+```
+]
+.pull-right[
+```{r, echo=FALSE, out.width="150%", fig.align="center"}
+knitr::include_graphics(paste0(here::here(),"/figures/phaseplot.png"))
+```
+]
+
+???
+
+So, our method, velocity, is basically the linear speed of a system's trajectory as it moves through phase space. 
+
+---
+
+# Step 1: Calculate ** $\Delta x_i$ ** <!--first differences --> 
+### $$\Delta x_i =  (x_{i,j} -x_{i-1, j})^2$$ 
+
+```{r, echo=FALSE, out.width="50%", fig.align="center"}
+knitr::include_graphics(paste0(here::here(),"/figures/exData_t1t2.png"))
+```
+.footnote[github: trashbirdecology/regimeDetectionMeasures]
+
+---
+
+# Step 2: Calculate ** $\Delta s$ **, 'distance travelled'
+### $$\Delta s_i = \sqrt{\sum_{j=1}^{n} (x_{i,j} -x_{i-1, j})^2}$$ 
+
+.pull-left[
+```{r, echo=FALSE, out.width="77%", fig.align="center"}
+knitr::include_graphics(paste0(here::here(),"/figures/exData.png"))
+```
+]
+.pull-right[
+```{r, echo=FALSE, out.width="77%", fig.align="center"}
+knitr::include_graphics(paste0(here::here(),"/figures/exData_t1t2.png"))
+```
+]
+.footnote[github: trashbirdecology/regimeDetectionMeasures]
+
+---
+
+
+# Step 3: Calculate ** $s$ **, **cumulative** distance travelled
+#### $$\Delta s_i = \sqrt{\sum_{j=1}^{n} (x_{i,j} -x_{i-1, j})^2}$$
+## $$s_k =  \sum_{i=2}^{k}\Delta{s_i}$$
+### $$2\leq k \leq n$$
+.footnote[github: trashbirdecology/regimeDetectionMeasures]
+
+---
+
+# Step 4: Calculate ** $v$ ** , the linear speed of ** $s$ **
+### $$v =\frac{\Delta s}{\Delta t} $$  
+```{r, echo=FALSE, out.width="55%", fig.align="center"}
+knitr::include_graphics(paste0(here::here(),"/figures/dsdtplot.png"))
+```
+
+---
+
+# Empirical System: Paleodiatom Community <!--paleo data-->
+```{r, eval=TRUE,echo=FALSE, out.width="100%"}
+knitr::include_graphics(paste0(here::here(),"/figures/fipaleo.png"))
+```
+
+.footnote[data: Spanbauer *et al.* 2014 PlosOne]
+
+???
+
+We also tested the method on paleodiatom data dating back about 8,000 years before present.
+Notice here there is a high species turnover
+
+---
+
+# Empirical System: Paleodiatom Community <!--3 Results-->
+.footnote[**Dotted** blue lines = **our**  shift points <br> **Dashed** red line =  Spanbauer *et al.* shift point ]
+```{r, eval=TRUE,echo=FALSE, out.width="88%"}
+knitr::include_graphics(paste0(here::here(),"/figures/paleoVelocity.png"))
+```
+
+???
+
+S and V clearly identify these turnover events, but V is somewhat noisy.
+
+---
+
+# Getting the Derivatives of Noisy Data 
+##### Total Variation Regularized Numerical Differentiation to smooth the original data 
+```{r, eval=TRUE,echo=FALSE, out.width="85%"}
+knitr::include_graphics(paste0(here::here(),"/figures/paleoV.png"))
+```
+
+.footnote[github: natbprice/tvdiff]
+???
+
+- Calculating the derivatives of noisy data is difficult, since many points are non-smooth
+Here we have used regularized differentiation to smooth out the original data, and which in turn smooths out the velocity. 
+
+---
+
+# Velocity $(v)$ Identifies Previously Unknown Periodicities 
+```{r, eval=TRUE,echo=FALSE, out.width="88%"}
+knitr::include_graphics(paste0(here::here(),"/figures/paleoV2.png"))
+```
+
+???
+- Additioanlly, we found it interesting that velocity also identifies interesting dynamics within the system regimes. Note the periodicities in regime 1 and 2. 
+- These periodicities were not discussed in origianl examinations of this data.
+---
+
+# $s$ and $v$ Robust to Data Quality & Quantity Issues <!-- 1 -->
+```{r, eval=TRUE,echo=FALSE, out.width="90%"}
+knitr::include_graphics(paste0(here::here(),"/figures/distance_95PI_s_observations.png"))
+```
+
+---
+# $s$ and $v$ Robust to Data Quality & Quantity Issues <!-- 2 -->
+```{r, eval=TRUE,echo=FALSE, out.width="90%"}
+knitr::include_graphics(paste0(here::here(),"/figures/distance_dsdt_observations.png"))
+```
+
+---
+
+# Conclusions 
+### Simply calculation, relative to other regime detection methods
+### Handles noisy  and sparse data
+### Less sensitive to data quality issues common in ecology
+### Velocity is best when mean > variance
+
+---
+
+# Next Steps
+### Numerical identification of exact change points  
+### Compare to distance-based metrics 
+### Compare to ordination techniques 
+### Identify out-of-sample predictive capacity
+
+
+---
+## Relevant R Packages:
+  - **`distanceTravelled`** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; calculate velocity 
+  - **`regimeDetectionMeasures`** calculate various metrics
+  - **`bbsRDM`**     &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;application to Breeding Bird Survey
+  - **`tvdiff`**   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; regularized differentation noisy data
+
+## More Information
+- **Twitter**: @trashbirdecol
+-  **GitHub** : trashbirdecology
+-  **Email**: &nbsp;&nbsp; &nbsp;jburnett@huskers.unl.edu
+
+  
+---
+
+# Acknowledgements
+.pull-left[
+### Financial Support
+```{r, eval=TRUE,echo=FALSE, out.width="100%"}
+knitr::include_graphics(paste0(here::here(), "/figures/funding.png"))
+```
+]
+.pull-right[
+### Analysis & Presentation
+```{r, eval=TRUE,echo=FALSE, out.width="33%"}
+knitr::include_graphics("https://user-images.githubusercontent.com/163582/45438104-ea200600-b67b-11e8-80fa-d9f2a99a03b0.png")
+knitr::include_graphics("https://bookdown.org/yihui/rmarkdown/images/hex-rmarkdown.png")
+knitr::include_graphics("https://d33wubrfki0l68.cloudfront.net/071952491ec4a6a532a3f70ecfa2507af4d341f9/c167c/images/hex-dplyr.png")
+knitr::include_graphics("https://d33wubrfki0l68.cloudfront.net/5f8c22ec53a1ac61684f3e8d59c623d09227d6b9/b15de/images/hex-tidyr.png")
+knitr::include_graphics("https://ih0.redbubble.net/image.543334423.1461/ap,550x550,12x16,1,transparent,t.png")
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/1200px-R_logo.svg.png")
+```
+]
+ .footnote[
+ **GitHub**:&nbsp;&nbsp;  TrashBirdEcology <br>
+ **twitter**:&nbsp;&nbsp; @trashbirdecol <br>
+ **e-mail**:&nbsp;&nbsp;&nbsp;&nbsp;  jburnett@huskers.unl.edu <br>
+ ]
+ 
+
+
+

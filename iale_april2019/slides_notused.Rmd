@@ -1,0 +1,242 @@
+---
+title: "System Velocity:"
+subtitle: "**A new method for dimension reduction and ecological regime shift detection** </br> </br> **Jessica L. Burnett**"
+author: "N.B. Price, A.J. Tyre, C.R. Allen, D.G. Angeler, & D. Twidwell"
+institute: "</br> @trashbirdecol </br> GitHub: trashbirdecology"
+date: "2019.04.10"
+output:
+  xaringan::moon_reader:
+    chakra: libs/remark-latest.min.js # to load the last saved verion for offline use
+    css: ["myFonts.css", "myTheme.css"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```{r setup, message=FALSE, warning=FALSE, cache=TRUE, echo=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(include = FALSE, warning=FALSE, message=FALSE, cache=TRUE,fig.path="/figures")
+pkgs <- c("tidyverse", "here", "xaringan", "knitr")
+# create a function to load packages
+loadPkgs <- function(packages) {
+  for(package_name in packages)
+  {library(package_name,character.only=TRUE, quietly = TRUE);}
+}
+loadPkgs(pkgs)
+
+# Plotting shit
+theme_set(theme_bw())
+```
+
+# Ecological 'Regime Shifts'  <!-- definition of regime shift -->
+</br>
+</br>
+</br>
+</br>
+</br>
+.center[<font size="18"><b>Changes in the structure  or functioning of a system</b></font>]
+
+???
+
+- Society and the scientific community are increasingly valuing the ability to identify and understand the impacts we are having  
+- One line of research trying to advance this area, is that of what some call, 'regime shifts'
+- There are numerous definitions, but today we define regime shifts as 
+
+---
+
+
+
+# Ecological Regime Shifts <!-- coral pre-post picture large -->
+
+```{r, echo=FALSE, out.width="80%", fig.align="center"}
+# knitr::include_graphics("https://static1.squarespace.com/static/5a5906400abd0406785519dd/t/5b7b180a6d2a7356c60f4ec4/1534793794260/IYORBank_BeforeAndAfter_TheOceanAgency_07.jpg")
+```
+.center[![](http://2ap93t1x1l6e2f6gfo3ag4vw.wpengine.netdna-cdn.com/wp-content/uploads/2016/07/bleaching_comparison.jpg)]
+
+.footnote[Image credit: [The Ocean Agency](https://static1.squarespace.com/static/5a5906400abd0406785519dd/t/5b7b180a6d2a7356c60f4ec4/1534793794260/IYORBank_BeforeAndAfter_TheOceanAgency_07.jpg)]
+???
+
+---
+
+
+<!-- .center[<iframe height="300" src="https://upload.wikimedia.org/wikipedia/commons/transcoded/9/9c/Lorenz.ogv/Lorenz.ogv.480p.vp9.webm"></iframe>] -->
+
+<!-- .center[<img src="https://upload.wikimedia.org/wikipedia/commons/1/13/A_Trajectory_Through_Phase_Space_in_a_Lorenz_Attractor.gif", width="350">] -->
+
+<!-- .footnote[ [1] Wikipedia ] -->
+
+
+# Consequences of Globalization
+
+```{r, echo=FALSE, out.width="100%"}
+knitr::include_graphics("http://rs.resalliance.org/wp-content/uploads/2010/01/2_tuesday.jpg")
+```
+
+Image credit: [Resilience Alliance](http://rs.resalliance.org/tag/adaptive-governance/)
+
+???
+
+- Globalization is leading to large-scale and long-lasting changes, including
+    - climate change
+    - urbanization
+- And is creating novel ecosystemsThe consequences of globalization -- climate change, urbanization, habitat loss, etc.-- are expected to pave the way for novel ecosystems.
+
+---
+
+# Types of Regime Shifts  <!-- type plots -->
+
+
+Given a system state $S$, and a driver, $D$, we can imagine a many potrential scenarios to evolve given shifts in $D$. 
+
+
+[Dakos et al. 2014]
+
+
+```{r rsTypesPlot}
+# slow driver to tipping point
+x = 1:10
+  a =-1
+  b = 4
+  c = 10
+S  = a*x^2 + b*x + c
+D = mean(S)
+
+p1<-myPlot(x = x, y1=S, y2=D, hline = D)+ 
+  geom_line(aes(x = max(x):(max(x)+round(length(x)*.4)), # add flat line to end  
+                y = min(S)), size = 1)+
+  ggtitle("slow driver to tipping point")
+# 
+x = c(1:5, 5:10)
+  a =  rep(10, 5)
+  b =  c(rep(2, round(length(x)*.5,0)))
+S = c(a,b)
+D = mean(S)      
+
+p2<-myPlot(x = x, y1=S, y2=D, hline = D)+
+    ggtitle("slow driver to tipping point")
+
+gridExtra::grid.arrange(p1, p2, nrow=2)
+```
+
+Panel 1: slow driver to a tipping point
+Panel 2:
+Panel 3: 
+
+<!-- Characteristics  -->
+<!-- 1. at least two 'stable' states, stable of ecologically relevant time scale -->
+<!-- 2. states are reinforce through some negative feedback -->
+<!-- 3.  -->
+
+
+---
+<!-- ############ PART I: BACKGROUND ############-->
+
+<!-- # Ecosystems are Complex <!-- reef pic --> -->
+
+<!-- ```{r, echo=FALSE, out.width="100%"} -->
+<!-- knitr::include_graphics("https://www.australiangeographic.com.au/wp-content/uploads/2018/06/great-barrier-reef-hardy.jpg") -->
+<!-- ``` -->
+<!-- Great Barrier Reef (Australia)   -->
+<!-- Image credit: [Australia Geographic](https://www.australiangeographic.com.au) -->
+70
+
+
+# Holy Grail of Ecolgy: <!-- holy grail pic -->
+## forecasting change in time to prevent  undesirable consequences
+
+```{r, eval=TRUE,echo=FALSE, out.width="66%"}
+knitr::include_graphics("https://venturebeat.com/wp-content/uploads/2018/06/Holy_Grail.shutterstock_268713941.jpg?fit=400%2C283&strip=all")
+```
+
+???
+- **Despite this complexity** of ecological systems, we as ecologists strive to **make predictions
+- One **increasingly active line of research** in ecology is "regime shifts"
+
+---
+
+
+
+# Related Software
+### R packages (dev versions):
+####  `trashbirdecology/distanceTravelled` (calculate $s$ and $v$)
+####  `trashbirdecology/regimeDetectionMeasures` (calculate multiple regime detection metrics)
+####  `trashbirdecology/bbsRDM` (application to spatial data)
+####  `natbprice/tvdiff` (regularized differentiation)
+
+```{r, eval=FALSE, echo=FALSE}
+source(paste0(here::here(), "/savePrezToPDF.R"))
+```
+
+---
+
+
+
+
+# Empirical System: Paleodiatom Community <!--1-->
+```{r, eval=TRUE,echo=FALSE, out.width="80%"}
+knitr::include_graphics(paste0(here::here(),"/figures/paleoData.png"))
+```
+
+.footnote[Data at  Spanbauer *et al.* 2014 PlosOne]
+ 
+???
+
+We also tested the method on paleodiatom data dating back about 8,000 years before present.
+Notice here there is a high species turnover
+---
+
+# Empirical System: Paleodiatom Community <!--paleo data-->
+```{r, eval=TRUE,echo=FALSE, out.width="100%"}
+knitr::include_graphics(paste0(here::here(),"/figures/fipaleo.png"))
+```
+
+.footnote[data: Spanbauer *et al.* 2014 PlosOne]
+
+???
+
+We also tested the method on paleodiatom data dating back about 8,000 years before present.
+Notice here there is a high species turnover
+
+---
+
+
+# Changing means and variance
+
+```{r, echo=FALSE, out.width="60%", fig.align="center"}
+knitr::include_graphics(paste0(here::here(),"/figures/velocSysEx1-1.png"))
+```
+</br>
+```{r, echo=FALSE, out.width="60%", fig.align="center"}
+knitr::include_graphics(paste0(here::here(),"/figures/velocSysEx2-1.png"))
+```
+
+---
+
+
+---
+
+# Potential Limitations of $v$
+### $v$ increases with increasing effect size
+
+```{r, eval=TRUE,echo=FALSE, out.width="80%"}
+  knitr::include_graphics(paste0(here::here(),"/figures/simVplot1.png"))
+```
+
+???
+- Going back to our toy system, the velocity increases as our total change in X_i increases 
+
+---
+
+# Potential Limitations of $v$
+### $v$ increases with increasing effect size
+
+```{r, eval=TRUE,echo=FALSE, out.width="80%"}
+knitr::include_graphics(paste0(here::here(),"/figures/simVplot2.png"))
+```
+
+???
+- But does not necessarily improve as an indicator
+
+
+ 

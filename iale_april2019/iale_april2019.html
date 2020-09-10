@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>System Velocity:</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="N.B. Price, A.J. Tyre, C.R. Allen, D.G. Angeler, &amp; D. Twidwell" />
+    <link rel="stylesheet" href="myFonts.css" type="text/css" />
+    <link rel="stylesheet" href="myTheme.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# System Velocity:
+## <strong>A new method for dimension reduction and ecological regime shift detection</strong> </br> </br> <strong>Jessica L. Burnett</strong>
+### N.B. Price, A.J. Tyre, C.R. Allen, D.G. Angeler, &amp; D. Twidwell
+### 2019.04.10
+
+---
+
+
+
+# Ecological Regime Shifts  &lt;!-- what how goal --&gt;
+## **what?**  a persistent change in the structure or functioning of a system 
+&lt;/br&gt;  
+???
+
+- A **persistent change in the sturcture or functioning of a system**
+
+--
+
+## **how?** loss of negative feedback(s) maintaining the system
+&lt;br&gt;
+
+???
+
+- Regime shifts occur, via a number of pathways, when a system **loses the negative feedback(s) maintaining** the system in its current state
+
+- Again, *goal* is to predict in time to prevent something bad from happening. Pipe dream? Probably...
+
+
+--
+
+## **goal?** predict in time to prevent  
+
+???
+- goal is to predict regime shifts in time to either prevent or create a plan of action for timely mitigation
+
+
+---
+
+# Regime Shifts &lt;!-- coral RS pic --&gt;
+&lt;img src="https://static1.squarespace.com/static/5a5906400abd0406785519dd/t/5b7b180a6d2a7356c60f4ec4/1534793794260/IYORBank_BeforeAndAfter_TheOceanAgency_07.jpg" width="100%" /&gt;
+
+.footnote[Image credit: [The Ocean Agency](https://static1.squarespace.com/static/5a5906400abd0406785519dd/t/5b7b180a6d2a7356c60f4ec4/1534793794260/IYORBank_BeforeAndAfter_TheOceanAgency_07.jpg)]
+???
+
+---
+# Ecosystems are Complex &lt;!-- characteristics --&gt;  
+###*(and complicated)*
+#### - high dimensional    
+#### - many ( `\(\infty\)` ?) interactions  
+#### - non-linear  
+#### - non-ergodic (open)   
+#### - dynamic  
+
+???
+Ecosystems are 
+- high dimensional, especially as we increase scale system extent
+- which leads to a higher number of interactions
+- increasingly realizing these are non-linear interactions
+- non-ergodic
+- because they are open, they are obviously dynamic.
+
+
+--
+#### - **difficult to model mathematically**     
+
+???
+B/c dynamic --&gt; difficult to model mathematically 
+
+Especially as we move beyonbd just a handful of state  variables.
+---
+
+
+# (Too Many) Methods for Detecting Regime Shifts  &lt;!--lit review--&gt;
+### `\(&gt; 70\)` (!) methods proposed in literature
+### `\(10\)` suitable for multivariable data
+### few explicitly handle **noisy** data
+### few explicitly handle **irregular sampling**
+
+???
+
+- Briefly, I'll mention that the number of **methods proposed** for as regime shift detetion methods is **staggering**. 
+- Because many of these methods come from the climatological and marine sciences,where we're looking for abrupt shifts in say Arctic Cod,  about 1/3 are suitabnle for multivariable data
+- And surprisingly, none explicitly handle noisy data
+
+---
+
+# Regime Shifts Detection Methods   &lt;!-- popular methods --&gt;
+  ###   Rising Variance/Critical Slowing Down
+  ###   Variance Index (max eigenvalue of covariance matrix)
+  ###   Principal Coordinates Analysis
+--
+  
+  ###   **Fisher Information**
+  
+--
+
+  ### **Velocity**, `\(v\)`
+
+???
+
+- A few of the methods capable of handling multivariable data variance, PCA and an obscure method called, Fisher Information. 
+
+- And its from FI where we derived a new method that I am described today, called **Velocity**
+
+---
+
+# Toy System   &lt;!-- toy system --&gt;
+&lt;img src="/Users/jessicaburnett/Documents/GitHub/velocity_presentations/iale_april2019/figures/exData.png" width="55%" style="display: block; margin: auto;" /&gt;
+
+$$ x ~ normal(\mu = 25, \sigma = 5) \textrm{ for t } &lt; 50$$
+`$$x ~ normal(\mu =100, \sigma = 5) \textrm{ for t } \geq 50$$`
+???
+So the calculations for **velocity** are quite simple, and I am goign to step through the few steps first using this simple 2-variable system, where I induced a change in mean of state variables at time t = 50. 
+
+---
+
+# Velocity, `\(v = \frac{\Delta s}{\Delta t}\)` 
+#### the **linear speed** of a system's **trajectory** (e.g., in phase space)
+
+.pull-left[
+&lt;img src="/Users/jessicaburnett/Documents/GitHub/velocity_presentations/iale_april2019/figures/exData.png" width="100%" style="display: block; margin: auto;" /&gt;
+]
+.pull-right[
+&lt;img src="/Users/jessicaburnett/Documents/GitHub/velocity_presentations/iale_april2019/figures/phaseplot.png" width="150%" style="display: block; margin: auto;" /&gt;
+]
+
+???
+
+So, our method, velocity, is basically the linear speed of a system's trajectory as it moves through phase space. 
+
+---
+
+# Step 1: Calculate ** `\(\Delta x_i\)` ** &lt;!--first differences --&gt; 
+### `$$\Delta x_i =  (x_{i,j} -x_{i-1, j})^2$$` 
+
+&lt;img src="/Users/jessicaburnett/Documents/GitHub/velocity_presentations/iale_april2019/figures/exData_t1t2.png" width="50%" style="display: block; margin: auto;" /&gt;
+.footnote[github: trashbirdecology/regimeDetectionMeasures]
+
+---
+
+# Step 2: Calculate ** `\(\Delta s\)` **, 'distance travelled'
+### `$$\Delta s_i = \sqrt{\sum_{j=1}^{n} (x_{i,j} -x_{i-1, j})^2}$$` 
+
+.pull-left[
+&lt;img src="/Users/jessicaburnett/Documents/GitHub/velocity_presentations/iale_april2019/figures/exData.png" width="77%" style="display: block; margin: auto;" /&gt;
+]
+.pull-right[
+&lt;img src="/Users/jessicaburnett/Documents/GitHub/velocity_presentations/iale_april2019/figures/exData_t1t2.png" width="77%" style="display: block; margin: auto;" /&gt;
+]
+.footnote[github: trashbirdecology/regimeDetectionMeasures]
+
+---
+
+
+# Step 3: Calculate ** `\(s\)` **, **cumulative** distance travelled
+#### `$$\Delta s_i = \sqrt{\sum_{j=1}^{n} (x_{i,j} -x_{i-1, j})^2}$$`
+## `$$s_k =  \sum_{i=2}^{k}\Delta{s_i}$$`
+### `$$2\leq k \leq n$$`
+.footnote[github: trashbirdecology/regimeDetectionMeasures]
+
+---
+
+# Step 4: Calculate ** `\(v\)` ** , the linear speed of ** `\(s\)` **
+### $$v =\frac{\Delta s}{\Delta t} $$  
+&lt;img src="/Users/jessicaburnett/Documents/GitHub/velocity_presentations/iale_april2019/figures/dsdtplot.png" width="55%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Empirical System: Paleodiatom Community &lt;!--paleo data--&gt;
+&lt;img src="/Users/jessicaburnett/Documents/GitHub/velocity_presentations/iale_april2019/figures/fipaleo.png" width="100%" /&gt;
+
+.footnote[data: Spanbauer *et al.* 2014 PlosOne]
+
+???
+
+We also tested the method on paleodiatom data dating back about 8,000 years before present.
+Notice here there is a high species turnover
+
+---
+
+# Empirical System: Paleodiatom Community &lt;!--3 Results--&gt;
+.footnote[**Dotted** blue lines = **our**  shift points &lt;br&gt; **Dashed** red line =  Spanbauer *et al.* shift point ]
+&lt;img src="/Users/jessicaburnett/Documents/GitHub/velocity_presentations/iale_april2019/figures/paleoVelocity.png" width="88%" /&gt;
+
+???
+
+S and V clearly identify these turnover events, but V is somewhat noisy.
+
+---
+
+# Getting the Derivatives of Noisy Data 
+##### Total Variation Regularized Numerical Differentiation to smooth the original data 
+&lt;img src="/Users/jessicaburnett/Documents/GitHub/velocity_presentations/iale_april2019/figures/paleoV.png" width="85%" /&gt;
+
+.footnote[github: natbprice/tvdiff]
+???
+
+- Calculating the derivatives of noisy data is difficult, since many points are non-smooth
+Here we have used regularized differentiation to smooth out the original data, and which in turn smooths out the velocity. 
+
+---
+
+# Velocity `\((v)\)` Identifies Previously Unknown Periodicities 
+&lt;img src="/Users/jessicaburnett/Documents/GitHub/velocity_presentations/iale_april2019/figures/paleoV2.png" width="88%" /&gt;
+
+???
+- Additioanlly, we found it interesting that velocity also identifies interesting dynamics within the system regimes. Note the periodicities in regime 1 and 2. 
+- These periodicities were not discussed in origianl examinations of this data.
+---
+
+# `\(s\)` and `\(v\)` Robust to Data Quality &amp; Quantity Issues &lt;!-- 1 --&gt;
+&lt;img src="/Users/jessicaburnett/Documents/GitHub/velocity_presentations/iale_april2019/figures/distance_95PI_s_observations.png" width="90%" /&gt;
+
+---
+# `\(s\)` and `\(v\)` Robust to Data Quality &amp; Quantity Issues &lt;!-- 2 --&gt;
+&lt;img src="/Users/jessicaburnett/Documents/GitHub/velocity_presentations/iale_april2019/figures/distance_dsdt_observations.png" width="90%" /&gt;
+
+---
+
+# Conclusions 
+### Simply calculation, relative to other regime detection methods
+### Handles noisy  and sparse data
+### Less sensitive to data quality issues common in ecology
+### Velocity is best when mean &gt; variance
+
+---
+
+# Next Steps
+### Numerical identification of exact change points  
+### Compare to distance-based metrics 
+### Compare to ordination techniques 
+### Identify out-of-sample predictive capacity
+
+
+---
+## Relevant R Packages:
+  - **`distanceTravelled`** &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; calculate velocity 
+  - **`regimeDetectionMeasures`** calculate various metrics
+  - **`bbsRDM`**     &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;application to Breeding Bird Survey
+  - **`tvdiff`**   &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;  &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; regularized differentation noisy data
+
+## More Information
+- **Twitter**: @trashbirdecol
+-  **GitHub** : trashbirdecology
+-  **Email**: &amp;nbsp;&amp;nbsp; &amp;nbsp;jburnett@huskers.unl.edu
+
+  
+---
+
+# Acknowledgements
+.pull-left[
+### Financial Support
+&lt;img src="/Users/jessicaburnett/Documents/GitHub/velocity_presentations/iale_april2019/figures/funding.png" width="100%" /&gt;
+]
+.pull-right[
+### Analysis &amp; Presentation
+&lt;img src="https://user-images.githubusercontent.com/163582/45438104-ea200600-b67b-11e8-80fa-d9f2a99a03b0.png" width="33%" /&gt;&lt;img src="https://bookdown.org/yihui/rmarkdown/images/hex-rmarkdown.png" width="33%" /&gt;&lt;img src="https://d33wubrfki0l68.cloudfront.net/071952491ec4a6a532a3f70ecfa2507af4d341f9/c167c/images/hex-dplyr.png" width="33%" /&gt;&lt;img src="https://d33wubrfki0l68.cloudfront.net/5f8c22ec53a1ac61684f3e8d59c623d09227d6b9/b15de/images/hex-tidyr.png" width="33%" /&gt;&lt;img src="https://ih0.redbubble.net/image.543334423.1461/ap,550x550,12x16,1,transparent,t.png" width="33%" /&gt;&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/1200px-R_logo.svg.png" width="33%" /&gt;
+]
+ .footnote[
+ **GitHub**:&amp;nbsp;&amp;nbsp;  TrashBirdEcology &lt;br&gt;
+ **twitter**:&amp;nbsp;&amp;nbsp; @trashbirdecol &lt;br&gt;
+ **e-mail**:&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;  jburnett@huskers.unl.edu &lt;br&gt;
+ ]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="libs/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
